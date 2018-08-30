@@ -1,33 +1,28 @@
+const pageConfig = {
+  pages:
+    [{
+      page: {
+        path:"/qiye",
+        sidebar: {},
+        navibar: {},
+      }
+    }, {page: {}}, {page: {}}, {page: {}}],
+}
 
-const sliderData = [
+const old = [
   {
     path: '/',
     name: '系统首页',
     icon: 'el-icon-time',
-
   },
   {
     path: '/list',
     name: '导航天梯',
     icon: 'el-icon-time',
-    child: [
+    children: [
       {
         path: 'list',
-        name: '导航栏2',
-        child:[
-          {
-            path: 'list',
-            name: '导航栏31',
-          },
-          {
-            path: 'list',
-            name: '导航栏32',
-          },
-          {
-            path: 'list',
-            name: '导航栏33',
-          }
-        ]
+        name: '导航栏一',
       },
       {
         path: 'dist1',
@@ -40,7 +35,6 @@ const sliderData = [
       {
         path: 'dist3',
         name: '导航栏四',
-
       },
       {
         path: 'dist4',
@@ -52,7 +46,7 @@ const sliderData = [
     path: '/set',
     name: '系统设置',
     icon: 'el-icon-time',
-    child: [
+    children: [
       {
         path: 'set',
         name: '系统设置',
@@ -70,7 +64,9 @@ const sliderData = [
 ];
 
 export default {
-  sliderData
+  sliderData: function () {
+    return pageConfig;
+  }
 }
 
 
