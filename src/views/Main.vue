@@ -10,61 +10,39 @@
             @close="handleClose"
             background-color="#545c64"
             text-color="#fff"
-            active-text-color="#ffd04b" style="border: none">
-            <el-menu-item index="1">
-              <i class="el-icon-info"></i>
-              <span slot="title">小红椒系统首页</span>
-            </el-menu-item>
+            active-text-color="#ffd04b"    tyle="border: none">
 
-            <el-submenu v-if="item.children.length > 1" v-for="(item,index) in sliderData" index="72">
+            <span  v-for="item in sliderData" >
+              <span v-if="ti.child != null" v-for="(ti,key) in item" >
 
-              <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>{{item}}</span>
-              </template>
-              <el-menu-item-group>
-                <el-menu-item index="17-1">选项1</el-menu-item>
-                <el-menu-item index="71-2">选项2</el-menu-item>
-                <el-menu-item index="717-3">选项1</el-menu-item>
-                <el-menu-item index="71-4">选项2</el-menu-item>
-                <el-menu-item index="177-5">选项1</el-menu-item>
-                <el-menu-item index="17-6">选项2</el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
+                  <el-submenu :index="key">
+                      <template slot="title">
+                        <i :class="ti.icon"></i>
+                        <span>{{ti.name}}</span>
+                      </template>
 
-            <el-submenu index="2">
-              <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>导航天梯</span>
-              </template>
-              <el-menu-item-group>
-                <el-menu-item index="1-1">选项1</el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
-                <el-menu-item index="1-3">选项1</el-menu-item>
-                <el-menu-item index="1-4">选项2</el-menu-item>
-                <el-menu-item index="1-5">选项1</el-menu-item>
-                <el-menu-item index="1-6">选项2</el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
-            <el-submenu index="3">
-              <template slot="title">
-                <i class="el-icon-setting"></i>
-                <span>导航天梯</span>
-              </template>
-              <el-menu-item-group>
-                <el-menu-item index="3-1">选项1</el-menu-item>
-                <el-menu-item index="3-2">选项2</el-menu-item>
-                <el-menu-item index="3-3">选项1</el-menu-item>
-                <el-menu-item index="3-4">选项2</el-menu-item>
-                <el-menu-item index="3-5">选项1</el-menu-item>
-                <el-menu-item index="3-6">选项2</el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
+                        <span v-if="res.child != null"  v-for="(res,_index) in ti.child" >
 
-            <el-menu-item index="4">
-              <i class="el-icon-setting"></i>
-              <span slot="title">导航四</span>
-            </el-menu-item>
+                           </el-submenu>
+                        </span>
+                <!--二级列表没有子节点渲染-->
+                        <span v-else>
+                            <el-menu-item :index="key+'-'+_index">
+                            <span slot="title" >{{res.name}} </span>
+                            </el-menu-item>
+                        </span>
+                      </el-submenu>
+              </span>
+                   <!--第一层没有子节点渲染-->
+              <span v-else >
+                  <el-menu-item  :index="key">
+                  <i :class="ti.icon" ></i>
+                  <span slot="title" >{{ti.name}} </span>
+                </el-menu-item>
+              </span>
+
+          </span>
+
           </el-menu>
         </el-col>
       </el-aside>
@@ -80,7 +58,33 @@
             <el-breadcrumb-item ><span style="color: #97a8be">活动详情</span></el-breadcrumb-item>
           </el-breadcrumb>
         </el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <span  v-for="item in sliderData" >
+
+            <span v-if="ti.child != null" v-for="(ti,index) in item" :key="index" >
+              {{index}}..
+                 {{ti.name}}：
+                      <span v-if="res.child != null"  v-for="(res,_index) in ti.child" :key="index+'-'+_index" >
+                            {{res.name}}
+                            <span v-for="(res2,__index) in res.child" >
+                              三级：{{res2.name}}
+                            </span>
+                      </span>
+                     <!--二级列表没有子节点渲染-->
+                      <span v-else>
+                        二级：
+                        {{res.path}}{{res.name}}
+                      </span>
+            </span>
+            <!--第一层没有子节点渲染-->
+            <span v-else>
+              {{index}}..
+               一级： {{ti.index}}  |
+            </span>
+
+          </span>
+
+        </el-main>
       </el-container>
     </el-container>
 
@@ -107,7 +111,7 @@
         clientHeight: '',
         device: '',
         hebox: '',
-        sliderData:sliderData.sliderData
+        sliderData:sliderData
       }
     },
     mounted() {
