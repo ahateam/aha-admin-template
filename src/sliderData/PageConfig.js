@@ -1,5 +1,15 @@
+const pageConfig = {
+  pages:
+    [{
+      page: {
+        path:"/qiye",
+        sidebar: {},
+        navibar: {},
+      }
+    }, {page: {}}, {page: {}}, {page: {}}],
+}
 
-const sliderData = [
+const old = [
   {
     path: '/',
     name: '系统首页',
@@ -54,9 +64,9 @@ const sliderData = [
 ];
 
 export default {
-    sliderData: function () {
-      return sliderData;
-    }
+  sliderData: function () {
+    return pageConfig;
+  }
 }
 
 
