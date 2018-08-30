@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+
   </div>
 </template>
 
@@ -10,8 +11,8 @@
     name: 'App',
     data() {
       return {
-        clientWidth,
-        clientHeight,
+        clientWidth: '',
+        clientHeight: '',
       }
     },
     mounted() {
@@ -25,7 +26,6 @@
       window.onresize = function windowResize() {
         that.clientWidth = document.body.clientWidth;
         that.clientHeight = document.body.clientHeight;
-        console.error(that.clientWidth + " & " + that.clientHeight);
       };
       //窗口大小监听器--end
 
