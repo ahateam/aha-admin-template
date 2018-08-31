@@ -8,15 +8,27 @@
     </el-header>
 
     <el-container>
-
       <el-aside>
         <side-bar :sliderData="sliderData"></side-bar>
       </el-aside>
-
       <el-main>
+        <el-row>
+          <search></search>
+        </el-row>
+        <el-row>
+          <radio-text :radioData="radioData"></radio-text>
+          <radio-text :radioData="radioData1"></radio-text>
+        </el-row>
+        <el-row>
+          <el-col :span="12">
+            <echarts ></echarts>
+          </el-col>
+          <el-col :span="12">
+            <echarts-bar></echarts-bar>
+          </el-col>
+        </el-row>
 
-        <radio-text :radioData="radioData"></radio-text>
-        <echarts></echarts>
+
         <!--<router-view></router-view>-->
       </el-main>
 
@@ -32,7 +44,9 @@
   import NaviBar from '@/components/NaviBar.vue';
   import SideBar from '@/components/SideBar.vue';
   import RadioText from '@/components/RadioText.vue';
-  import Echarts from '@/components/Echats.vue'
+  import Echarts from '@/components/Echats.vue';
+  import EchartsBar from '@/components/EchartsBar.vue';
+  import Search from '@/components/Search.vue';
   import pageConfig from '@/data/PageConfig.js';
   import radioTextData from '@/data/RadioTextData.js'
 
@@ -40,16 +54,19 @@
     name: 'Main',
     data() {
       return {
-      sliderData: pageConfig.pageConfig.pages[0].page,
-      navibarData:pageConfig.pageConfig.pages[0].page,
-      radioData: radioTextData.radioTextData[0]
+        sliderData: pageConfig.pageConfig.pages[0].page,
+        navibarData:pageConfig.pageConfig.pages[0].page,
+        radioData: radioTextData.radioTextData[0],
+        radioData1:radioTextData.radioTextData[1],
     }
   },
     components: {
       SideBar,
       NaviBar,
       RadioText,
-      Echarts
+      Echarts,
+      EchartsBar,
+      Search
     }
   }
 

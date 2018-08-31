@@ -1,17 +1,13 @@
 <template>
     <div>
-      <div id="myChart" :style="{width:'1000px', height:'500px'}"></div>
+      <div id="myChart" :style="{width:'90%', height:'300px'}"></div>
+
     </div>
 </template>
 
 <script>
 
   export default {
-    data() {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    },
     mounted() {
       this.drawLine();
     },
