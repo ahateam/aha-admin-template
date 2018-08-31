@@ -77,7 +77,49 @@ const page1 = [
         id:'3-3',
       }
     ]
-  }
+  },
+  {
+    path: '/',
+    name: '系统首页1',
+    icon: 'el-icon-time',
+    id: '4'
+  },
+  {
+    path: '/',
+    name: '系统首页2',
+    icon: 'el-icon-time',
+    id: '5'
+  },
+  {
+    path: '/',
+    name: '系统首页3',
+    icon: 'el-icon-time',
+    id: '6'
+  },
+  {
+    path: '/',
+    name: '系统首页4',
+    icon: 'el-icon-time',
+    id: '7'
+  },
+  {
+    path: '/',
+    name: '系统首页5',
+    icon: 'el-icon-time',
+    id: '8'
+  },{
+    path: '/',
+    name: '系统首页6',
+    icon: 'el-icon-time',
+    id: '9'
+  },
+  {
+    path: '/',
+    name: '系统首页7',
+    icon: 'el-icon-time',
+    id: '10'
+  },
+
 ];
 const pageConfig = {
   pages:

@@ -16,6 +16,7 @@
       <el-main>
 
         <radio-text :radioData="radioData"></radio-text>
+        <echarts></echarts>
         <!--<router-view></router-view>-->
       </el-main>
 
@@ -30,10 +31,10 @@
 
   import NaviBar from '@/components/NaviBar.vue';
   import SideBar from '@/components/SideBar.vue';
-  import RadioText from '@/components/RadioText.vue'
+  import RadioText from '@/components/RadioText.vue';
+  import Echarts from '@/components/Echats.vue'
   import pageConfig from '@/data/PageConfig.js';
   import radioTextData from '@/data/RadioTextData.js'
-
 
   export default {
     name: 'Main',
@@ -47,7 +48,8 @@
     components: {
       SideBar,
       NaviBar,
-      RadioText
+      RadioText,
+      Echarts
     }
   }
 
