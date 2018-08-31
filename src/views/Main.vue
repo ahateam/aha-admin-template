@@ -2,7 +2,8 @@
 
   <el-container>
 
-    <el-header>
+    <el-header class="head">
+
       <navi-bar :navibarData="navibarData"></navi-bar>
     </el-header>
 
@@ -14,7 +15,8 @@
 
       <el-main>
 
-        <router-view></router-view>
+        <radio-text :radioData="radioData"></radio-text>
+        <!--<router-view></router-view>-->
       </el-main>
 
     </el-container>
@@ -30,23 +32,28 @@
   import SideBar from '@/components/SideBar.vue';
   import RadioText from '@/components/RadioText.vue'
   import pageConfig from '@/data/PageConfig.js';
+  import radioTextData from '@/data/RadioTextData.js'
 
 
   export default {
     name: 'Main',
     data() {
       return {
-        sliderData: pageConfig.pageConfig.pages[0].page,
-        navibarData:pageConfig.pageConfig.pages[0].page
-      }
-    },
+      sliderData: pageConfig.pageConfig.pages[0].page,
+      navibarData:pageConfig.pageConfig.pages[0].page,
+      radioData: radioTextData.radioTextData[0]
+    }
+  },
     components: {
       SideBar,
       NaviBar,
+      RadioText
     }
   }
 
 </script>
 <style scoped>
-
+  .head{
+    padding: 0;
+  }
 </style>

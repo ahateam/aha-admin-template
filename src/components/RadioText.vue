@@ -1,10 +1,10 @@
 <template>
     <div >
       <el-row class="nav-radio" >
-        <el-col :span="2" style="margin-left: 20px"><span><b style="font-size: 15px">{{title}}:</b></span></el-col>
+        <el-col :span="2" class="title-box" ><span><b>{{radioData.title}}:</b></span></el-col>
         <el-col :span="21">
           <div class="radio-text">
-            <el-tag class=" radio-active" :class="{active:index == isActive}"  @click.native="checkedItem(index)"  v-for="(item,index) in texts" :key="index">{{item}}</el-tag>
+            <el-tag class="radio-active" size="mini"  :class="{active:index == isActive}"  @click.native="checkedItem(index)"  v-for="(item,index) in radioData.texts" :key="index">{{item}}</el-tag>
           </div>
         </el-col>
       </el-row>
@@ -19,24 +19,21 @@
           this.isActive = index
         }
       },
-      props: {
-        title: {
-          type: String,
-          required: true
-        },
-        texts: {
-          type: Array,
-          required: true
-        }
+      props:{
+        radioData:Object
       },
       data() {
         return {
-          isActive: 0
+          isActive: 0,
         }
       }
     }
 </script>
 <style  scoped>
+  .title-box{
+    margin-left: 20px;
+    font-size: 14px
+  }
 .nav-radio{
     color:#333;
     line-height: 40px;
@@ -51,7 +48,7 @@
   color: #fff;
   background: #409EFF;
 }
-radio-active:active{
+.active{
   color: #fff;
   background: #409EFF;
 }
