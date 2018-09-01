@@ -46,6 +46,11 @@
 
   export default {
     name: 'SideBar',
+    data(){
+      return{
+
+      }
+    },
     props: {
       sliderData: {
         type: Object,
