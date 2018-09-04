@@ -5,10 +5,15 @@
       <navi-bar :naviBarConfig="naviBarConfig" :naviBarMode="'horizontal'"></navi-bar>
     </el-header>
     <el-container class="content">
-      <el-aside>
-        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'"></navi-bar>
-      </el-aside>
+      <div class="side-bar">
+        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse"></navi-bar>
+      </div>
       <el-main>
+        <el-radio-group v-model="isCollapse" size="mini">
+          <el-radio-button :label="false">展开</el-radio-button>
+          <el-radio-button :label="true">收起</el-radio-button>
+        </el-radio-group>
+
         <el-row class="row-style">
           <search></search>
         </el-row>
@@ -48,36 +53,38 @@
   import radioTextData from '@/config/RadioTextData.js'
 
   export default {
-
-    data() {
-      return {
-        sideBarConfig: test2SideBarConfig,
-        naviBarConfig: test1SideBarConfig,
-        radioData: radioTextData.radioTextData[0],
-        radioData1: radioTextData.radioTextData[1],
-      }
-    },
     components: {
       NaviBar,
       RadioText,
       Echarts,
       EchartsBar,
       Search
-    }
+    },
+    data() {
+      return {
+        sideBarConfig: test2SideBarConfig,
+        naviBarConfig: test1SideBarConfig,
+        isCollapse: false,
+        radioData: radioTextData.radioTextData[0],
+        radioData1: radioTextData.radioTextData[1],
+      }
+    },
+    methods: {
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
+      }
+    },
+
   }
 
 </script>
 <style scoped>
 
-  html, body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-  }
-
   .head {
-    padding: 0;
+    background-color: #545c64;
   }
 
   .content-box {

@@ -2,6 +2,7 @@
 
   <el-menu
     :mode="naviBarMode"
+    :collapse="isCollapse"
     default-active="1"
     background-color="#545c64"
     text-color="#fff"
@@ -65,6 +66,11 @@
       naviBarMode: {
         type: String,
         required: true,
+      },
+      isCollapse: {
+        type: Boolean,
+        required: false,
+        default: false
       }
     },
     methods: {
