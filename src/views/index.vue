@@ -1,25 +1,22 @@
 <template>
 
-  <el-container>
-
+  <el-container class="content-box">
     <el-header class="head">
-
       <navi-bar :naviBarConfig="naviBarConfig"></navi-bar>
     </el-header>
-
-    <el-container>
+    <el-container class="content" >
       <el-aside>
         <side-bar :sideBarConfig="sideBarConfig"></side-bar>
       </el-aside>
-      <el-main>
-        <el-row>
+      <el-main >
+        <el-row class="row-style">
           <search></search>
         </el-row>
-        <el-row>
+        <el-row class="row-style"  >
           <radio-text :radioData="radioData"></radio-text>
           <radio-text :radioData="radioData1"></radio-text>
         </el-row>
-        <el-row>
+        <el-row class="row-style" >
           <el-col :span="12">
             <echarts></echarts>
           </el-col>
@@ -27,8 +24,6 @@
             <echarts-bar></echarts-bar>
           </el-col>
         </el-row>
-
-
         <!--<router-view></router-view>-->
       </el-main>
 
@@ -77,4 +72,27 @@
 </script>
 <style scoped>
 
+  html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .head{
+    padding: 0;
+  }
+  .content-box{
+    height: 100vh;
+  }
+  .content{
+    background: #f0f2f5
+  }
+  .side-bar{
+    height: 100%;
+  }
+  .row-style{
+    background: #fff;
+    margin-top: 20px;
+    padding: 10px 10px;
+  }
 </style>
