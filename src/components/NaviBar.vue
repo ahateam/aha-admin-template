@@ -1,45 +1,53 @@
 <template>
+
   <el-menu
-    mode="horizontal"
-    @select="handleSelect"
+    :mode="naviBarMode"
+    default-active="1"
     background-color="#545c64"
     text-color="#fff"
     active-text-color="#ffd04b">
-    <!--<span v-if="value.child != null" v-for="value in navibarData.navibar" >  &lt;!&ndash;第一层遍历&ndash;&gt;-->
-    <!--<el-submenu index="value.id">-->
-    <!--<template slot="title">{{value.name}}</template>-->
-    <!--<span v-if="res.child != null"  v-for="res in value.child" >   &lt;!&ndash;第二层遍历&ndash;&gt;-->
-    <!--<el-submenu :index="res.id">-->
-    <!--<template slot="title">{{res.name}}</template>-->
-    <!--<span v-for="res2 in res.child" >              &lt;!&ndash;第三层遍历&ndash;&gt;-->
-    <!--<el-menu-item :index="res2.id">{{res2.name}}</el-menu-item>-->
-    <!--</span>-->
-    <!--</el-submenu>-->
-    <!--</span>-->
-    <!--<span v-else>-->
-    <!--<el-menu-item :index="res.id">{{res.name}}</el-menu-item>-->
-    <!--</span>-->
-    <!--</el-submenu>-->
-    <!--</span>-->
-    <!--<span v-else >-->
-    <!--<el-menu-item index="value.id">{{value.name}}</el-menu-item>-->
-    <!--</span>-->
-    <el-menu-item index="1">首页</el-menu-item>
-    <el-submenu index="2">
-      <template slot="title">我的工作台</template>
-      <el-menu-item index="2-1">选项1</el-menu-item>
-      <el-menu-item index="2-2">选项2</el-menu-item>
-      <el-menu-item index="2-3">选项3</el-menu-item>
-      <el-submenu index="2-4">
-        <template slot="title">选项4</template>
-        <el-menu-item index="2-4-1">选项1</el-menu-item>
-        <el-menu-item index="2-4-2">选项2</el-menu-item>
-        <el-menu-item index="2-4-3">选项3</el-menu-item>
+
+    <!--第一层遍历-->
+    <!--用组件name拼接索引作为子菜单的index编号，可以避免出现id混乱-->
+    <el-submenu v-if="item.child != null" v-for="(item,ind) in naviBarConfig.data"
+                :key="ind"
+                :index="naviBarConfig.name + '-' + ind">
+      <template slot="title" v-on:click="linkTo(item.path)">
+        <i :class="item.icon"></i>
+        <span>{{item.name}}</span>
+      </template>
+
+      <!--第二层遍历-->
+      <!--用组件name拼接索引作为子菜单的index编号，可以避免出现id混乱-->
+      <el-submenu v-if="child.child != null" v-for="(child,childInd) in item.child"
+                  :key="childInd"
+                  :index="naviBarConfig.name + '-' + ind + '-' + childInd">
+        <template slot="title" v-on:click="linkTo(child.path)">
+          <span>{{child.name}}</span>
+        </template>
+
+        <!--第三层遍历-->
+        <!--用组件name拼接索引作为子菜单的index编号，可以避免出现id混乱-->
+        <el-menu-item v-for="(grandChild,grandChildInd) in child.child"
+                      :key="grandChildInd"
+                      :index="naviBarConfig.name + '-' + ind + '-' + childInd + '-' + grandChildInd"
+                      v-on:click="linkTo(grandChild.path)">
+          {{grandChild.name}}
+        </el-menu-item>
       </el-submenu>
+
+      <!--第二层遍历，只有一个节点-->
+      <el-menu-item v-else :index="naviBarConfig.name + '-' + ind + '-' + childInd"
+                    v-on:click="linkTo(child.path)">
+        {{child.name}}
+      </el-menu-item>
     </el-submenu>
 
-    <el-menu-item index="3" disabled>消息中心</el-menu-item>
-    <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+    <!--第一层遍历，只有一个节点-->
+    <el-menu-item v-else :index="naviBarConfig.name + '-0'" v-on:click="linkTo(item.path)">
+      <i :class="item.icon"></i>
+      <span>{{item.name}}</span>
+    </el-menu-item>
 
 
   </el-menu>
@@ -51,14 +59,21 @@
   export default {
     props: {
       naviBarConfig: {
-        type: Array,
-        required: true
+        type: Object,
+        required: true,
+      },
+      naviBarMode: {
+        type: String,
+        required: true,
       }
     },
     methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+      linkTo(path) {
+        console.info("navi-bar-goto>>>" + path);
+        if (path != null) {
+          this.$router.push(path);
+        }
+      },
     }
   }
 
