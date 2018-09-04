@@ -1,121 +1,121 @@
 const page1 = [
   {
     path: '/',
-    name: '系统首页',
+    name: 'home',
     icon: 'el-icon-time',
     id: '1'
   },
   {
     path: '/list',
-    name: '导航天梯',
+    name: 'document',
     icon: 'el-icon-time',
     id:'2',
     child: [
       {
         path: 'list',
-        name: '导航栏2',
+        name: 'document1',
         id:'2-1',
         child:[
           {
             path: 'list',
-            name: '导航栏31',
+            name: 'document2',
             id:'2-1-1',
           },
           {
             path: 'list',
-            name: '导航栏32',
+            name: 'document3',
             id:'2-1-2',
           },
           {
             path: 'list',
-            name: '导航栏33',
+            name: 'document4',
             id:'2-1-3',
           }
         ]
       },
       {
         path: 'dist1',
-        name: '导航栏二',
+        name: 'document5',
         id:'2-2',
       },
       {
         path: 'dist2',
-        name: '导航栏三',
+        name: 'echarts',
         id:'2-3',
       },
       {
         path: 'dist3',
-        name: '导航栏四',
+        name: 'table',
         id:'2-4',
       },
       {
         path: 'dist4',
-        name: '导航栏五',
+        name: 'set5',
         id:'2-5',
       }
     ]
   },
   {
     path: '/set',
-    name: '系统设置',
+    name: 'set',
     icon: 'el-icon-time',
     id:'3',
     child: [
       {
         path: 'set',
-        name: '系统设置',
+        name: 'set',
         id:'3-1',
       },
       {
         path: 'loginSet',
-        name: '登陆设置',
+        name: 'set1',
         id:'3-2',
       },
       {
         path: 'userSet',
-        name: '用户设置',
+        name: 'set2',
         id:'3-3',
       }
     ]
   },
   {
     path: '/',
-    name: '系统首页1',
+    name: 'component',
     icon: 'el-icon-time',
     id: '4'
   },
   {
     path: '/',
-    name: '系统首页2',
+    name: 'component',
     icon: 'el-icon-time',
     id: '5'
   },
   {
     path: '/',
-    name: '系统首页3',
+    name: 'component1',
     icon: 'el-icon-time',
     id: '6'
   },
   {
     path: '/',
-    name: '系统首页4',
+    name: 'component2',
     icon: 'el-icon-time',
     id: '7'
   },
   {
     path: '/',
-    name: '系统首页5',
+    name: 'component3',
     icon: 'el-icon-time',
     id: '8'
   },{
     path: '/',
-    name: '系统首页6',
+    name: 'component4',
     icon: 'el-icon-time',
     id: '9'
   },
   {
     path: '/',
-    name: '系统首页7',
+    name: 'component5',
     icon: 'el-icon-time',
     id: '10'
   },

@@ -9,8 +9,9 @@
         <side-bar :sliderData="sliderData" class="side-bar"  ></side-bar>
       </el-aside>
       <el-main >
-        <el-row class="row-style">
+        <el-row class="row-first">
           <search></search>
+          <el-button type="success" @click="switchLang()">更换语言</el-button>
         </el-row>
         <el-row class="row-style"  >
           <radio-text :radioData="radioData"></radio-text>
@@ -23,6 +24,9 @@
           <el-col :span="12">
             <echarts-bar></echarts-bar>
           </el-col>
+        </el-row>
+        <el-row>
+          <lang></lang>
         </el-row>
         <!--<router-view></router-view>-->
       </el-main>
@@ -40,13 +44,27 @@
   import SideBar from '@/components/SideBar.vue';
   import RadioText from '@/components/RadioText.vue';
   import Echarts from '@/components/Echats.vue';
+
+  import Lang from '@/components/Lang.vue';
+
   import EchartsBar from '@/components/EchartsBar.vue';
   import Search from '@/components/Search.vue';
   import pageConfig from '@/data/PageConfig.js';
   import radioTextData from '@/data/RadioTextData.js'
 
+
+
   export default {
     name: 'Main',
+    methods:{
+      switchLang()  {
+        if(this.$i18n.locale == 'en'){
+          this.$i18n.locale = 'cn'
+        }else{
+          this.$i18n.locale = 'en'
+        }
+      }
+    },
     data() {
       return {
         sliderData: pageConfig.pageConfig.pages[0].page,
@@ -61,7 +79,8 @@
       RadioText,
       Echarts,
       EchartsBar,
-      Search
+      Search,
+      Lang
     }
   }
 
@@ -88,6 +107,10 @@
   .row-style{
     background: #fff;
     margin-top: 20px;
+    padding: 10px 10px;
+  }
+  .row-first{
+    background: #fff;
     padding: 10px 10px;
   }
 </style>
