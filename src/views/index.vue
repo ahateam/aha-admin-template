@@ -4,18 +4,27 @@
     <el-header class="head">
       <navi-bar :naviBarConfig="naviBarConfig" :naviBarMode="'horizontal'"></navi-bar>
     </el-header>
+
+
     <el-container class="content">
+
       <div class="side-bar">
         <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse"></navi-bar>
       </div>
-      <el-main>
+
+      <el-main >
+
         <el-radio-group v-model="isCollapse" size="mini">
           <el-radio-button :label="false">展开</el-radio-button>
           <el-radio-button :label="true">收起</el-radio-button>
         </el-radio-group>
 
+        <el-row class="row-first"></el-row>
+
+
         <el-row class="row-style">
           <search></search>
+          <el-button type="success" @click="switchLang()">更换语言</el-button>
         </el-row>
         <el-row class="row-style">
           <radio-text :radioData="radioData"></radio-text>
@@ -28,6 +37,9 @@
           <el-col :span="12">
             <echarts-bar></echarts-bar>
           </el-col>
+        </el-row>
+        <el-row>
+          <lang></lang>
         </el-row>
         <!--<router-view></router-view>-->
       </el-main>
@@ -44,6 +56,9 @@
   import NaviBar from '@/components/NaviBar.vue';
   import RadioText from '@/components/RadioText.vue';
   import Echarts from '@/components/Echats.vue';
+
+  import Lang from '@/components/Lang.vue';
+
   import EchartsBar from '@/components/EchartsBar.vue';
   import Search from '@/components/Search.vue';
 
@@ -52,7 +67,10 @@
 
   import radioTextData from '@/config/RadioTextData.js'
 
+
+
   export default {
+
     components: {
       NaviBar,
       RadioText,
@@ -60,6 +78,18 @@
       EchartsBar,
       Search
     },
+
+    name: 'Main',
+    methods:{
+      switchLang()  {
+        if(this.$i18n.locale == 'en'){
+          this.$i18n.locale = 'cn'
+        }else{
+          this.$i18n.locale = 'en'
+        }
+      }
+    },
+
     data() {
       return {
         sideBarConfig: test2SideBarConfig,
@@ -69,14 +99,7 @@
         radioData1: radioTextData.radioTextData[1],
       }
     },
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
-    },
+
 
   }
 
@@ -102,6 +125,10 @@
   .row-style {
     background: #fff;
     margin-top: 20px;
+    padding: 10px 10px;
+  }
+  .row-first{
+    background: #fff;
     padding: 10px 10px;
   }
 </style>

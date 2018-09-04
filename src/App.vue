@@ -16,7 +16,6 @@
       }
     },
     mounted() {
-
       //窗口大小监听器--start
       // 窗口大小初始值
       this.clientWidth = document.body.clientWidth;
