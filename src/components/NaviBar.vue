@@ -3,7 +3,7 @@
   <el-menu
     :mode="naviBarMode"
     :collapse="isCollapse"
-    class="el-menu-vertical-demo"
+    :class="naviBarMode == 'vertical'? 'el-menu-vertical ' : ''"
     default-active="1"
     background-color="#545c64"
     text-color="#fff"
@@ -86,8 +86,8 @@
 
 </script>
 <style scoped>
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
+  .el-menu-vertical:not(.el-menu--collapse) {
     width: 200px;
-    min-height: 400px;
+    /*min-height: 400px;*/
   }
 </style>
