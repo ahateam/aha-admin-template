@@ -1,30 +1,28 @@
 <template>
   <el-menu
-    :default-active="activeIndex2"
-    class="el-menu-demo"
     mode="horizontal"
     @select="handleSelect"
     background-color="#545c64"
     text-color="#fff"
     active-text-color="#ffd04b">
-      <!--<span v-if="value.child != null" v-for="value in navibarData.navibar" >  &lt;!&ndash;第一层遍历&ndash;&gt;-->
-          <!--<el-submenu index="value.id">-->
-            <!--<template slot="title">{{value.name}}</template>-->
-          <!--<span v-if="res.child != null"  v-for="res in value.child" >   &lt;!&ndash;第二层遍历&ndash;&gt;-->
-            <!--<el-submenu :index="res.id">-->
-              <!--<template slot="title">{{res.name}}</template>-->
-              <!--<span v-for="res2 in res.child" >              &lt;!&ndash;第三层遍历&ndash;&gt;-->
-                <!--<el-menu-item :index="res2.id">{{res2.name}}</el-menu-item>-->
-              <!--</span>-->
-            <!--</el-submenu>-->
-          <!--</span>-->
-          <!--<span v-else>-->
-            <!--<el-menu-item :index="res.id">{{res.name}}</el-menu-item>-->
-          <!--</span>-->
-        <!--</el-submenu>-->
-      <!--</span>-->
+    <!--<span v-if="value.child != null" v-for="value in navibarData.navibar" >  &lt;!&ndash;第一层遍历&ndash;&gt;-->
+    <!--<el-submenu index="value.id">-->
+    <!--<template slot="title">{{value.name}}</template>-->
+    <!--<span v-if="res.child != null"  v-for="res in value.child" >   &lt;!&ndash;第二层遍历&ndash;&gt;-->
+    <!--<el-submenu :index="res.id">-->
+    <!--<template slot="title">{{res.name}}</template>-->
+    <!--<span v-for="res2 in res.child" >              &lt;!&ndash;第三层遍历&ndash;&gt;-->
+    <!--<el-menu-item :index="res2.id">{{res2.name}}</el-menu-item>-->
+    <!--</span>-->
+    <!--</el-submenu>-->
+    <!--</span>-->
+    <!--<span v-else>-->
+    <!--<el-menu-item :index="res.id">{{res.name}}</el-menu-item>-->
+    <!--</span>-->
+    <!--</el-submenu>-->
+    <!--</span>-->
     <!--<span v-else >-->
-       <!--<el-menu-item index="value.id">{{value.name}}</el-menu-item>-->
+    <!--<el-menu-item index="value.id">{{value.name}}</el-menu-item>-->
     <!--</span>-->
     <el-menu-item index="1">首页</el-menu-item>
     <el-submenu index="2">
@@ -51,17 +49,11 @@
 <script>
 
   export default {
-    name: 'NaviBar',
-    props:{
-      navibarData: {
-        type: Object,
+    props: {
+      naviBarConfig: {
+        type: Array,
         required: true
       }
-    },
-    data() {
-      return {
-        activeIndex2: '1'
-      };
     },
     methods: {
       handleSelect(key, keyPath) {

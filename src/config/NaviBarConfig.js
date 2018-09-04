@@ -1,4 +1,4 @@
-const page1 = [
+export default [
   {
     path: '/',
     name: '系统首页',
@@ -9,49 +9,49 @@ const page1 = [
     path: '/list',
     name: '导航天梯',
     icon: 'el-icon-time',
-    id:'2',
+    id: '2',
     child: [
       {
         path: 'list',
         name: '导航栏2',
-        id:'2-1',
-        child:[
+        id: '2-1',
+        child: [
           {
             path: 'list',
             name: '导航栏31',
-            id:'2-1-1',
+            id: '2-1-1',
           },
           {
             path: 'list',
             name: '导航栏32',
-            id:'2-1-2',
+            id: '2-1-2',
           },
           {
             path: 'list',
             name: '导航栏33',
-            id:'2-1-3',
+            id: '2-1-3',
           }
         ]
       },
       {
         path: 'dist1',
         name: '导航栏二',
-        id:'2-2',
+        id: '2-2',
       },
       {
         path: 'dist2',
         name: '导航栏三',
-        id:'2-3',
+        id: '2-3',
       },
       {
         path: 'dist3',
         name: '导航栏四',
-        id:'2-4',
+        id: '2-4',
       },
       {
         path: 'dist4',
         name: '导航栏五',
-        id:'2-5',
+        id: '2-5',
       }
     ]
   },
@@ -59,22 +59,22 @@ const page1 = [
     path: '/set',
     name: '系统设置',
     icon: 'el-icon-time',
-    id:'3',
+    id: '3',
     child: [
       {
         path: 'set',
         name: '系统设置',
-        id:'3-1',
+        id: '3-1',
       },
       {
         path: 'loginSet',
         name: '登陆设置',
-        id:'3-2',
+        id: '3-2',
       },
       {
         path: 'userSet',
         name: '用户设置',
-        id:'3-3',
+        id: '3-3',
       }
     ]
   },
@@ -107,7 +107,7 @@ const page1 = [
     name: '系统首页5',
     icon: 'el-icon-time',
     id: '8'
-  },{
+  }, {
     path: '/',
     name: '系统首页6',
     icon: 'el-icon-time',
@@ -119,21 +119,6 @@ const page1 = [
     icon: 'el-icon-time',
     id: '10'
   },
-
 ];
-const pageConfig = {
-  pages:
-    [{
-      page: {
-        path:"/qiye",
-        sidebar: page1,
-        navibar: page1,
-      }
-    }, {page: {}}, {page: {}}, {page: {}}],
-}
-
-export default {
-  pageConfig
-}
 
 

@@ -16,7 +16,7 @@
               <span slot="title">小红椒系统首页</span>
             </el-menu-item>
 
-            <el-submenu v-if="item.children.length > 1" v-for="(item,index) in pageConfig" :key="item.path" index="72">
+            <el-submenu v-if="item.children.length > 1" v-for="(item,index) in sideBarConfig" :key="item.path" index="72">
 
               <template slot="title">
                 <i class="el-icon-location"></i>
@@ -89,7 +89,7 @@
 </template>
 
 <script>
-  import pageConfig from '@/pageConfig/pageConfig';
+  import sideBarConfig from '@/sideBarConfig/sideBarConfig';
 
   export default {
     name: 'Main',
@@ -107,7 +107,7 @@
         clientHeight: '',
         device: '',
         hebox: '',
-        pageConfig:pageConfig.pageConfig
+        sideBarConfig:sideBarConfig.sideBarConfig
       }
     },
     mounted() {

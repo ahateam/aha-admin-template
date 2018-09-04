@@ -4,12 +4,12 @@
 
     <el-header class="head">
 
-      <navi-bar :navibarData="navibarData"></navi-bar>
+      <navi-bar :naviBarConfig="naviBarConfig"></navi-bar>
     </el-header>
 
     <el-container>
       <el-aside>
-        <side-bar :sliderData="sliderData"></side-bar>
+        <side-bar :sideBarConfig="sideBarConfig"></side-bar>
       </el-aside>
       <el-main>
         <el-row>
@@ -21,7 +21,7 @@
         </el-row>
         <el-row>
           <el-col :span="12">
-            <echarts ></echarts>
+            <echarts></echarts>
           </el-col>
           <el-col :span="12">
             <echarts-bar></echarts-bar>
@@ -47,19 +47,23 @@
   import Echarts from '@/components/Echats.vue';
   import EchartsBar from '@/components/EchartsBar.vue';
   import Search from '@/components/Search.vue';
-  import pageConfig from '@/data/PageConfig.js';
-  import radioTextData from '@/data/RadioTextData.js'
+
+  import test1SideBarConfig from '@/config/Test1SideBarConfig.js';
+  import test2SideBarConfig from '@/config/Test2SideBarConfig.js';
+  import naviBarConfig from '@/config/NaviBarConfig.js';
+
+  import radioTextData from '@/config/RadioTextData.js'
 
   export default {
-    name: 'Main',
+
     data() {
       return {
-        sliderData: pageConfig.pageConfig.pages[0].page,
-        navibarData:pageConfig.pageConfig.pages[0].page,
+        sideBarConfig: test2SideBarConfig,
+        naviBarConfig: naviBarConfig,
         radioData: radioTextData.radioTextData[0],
-        radioData1:radioTextData.radioTextData[1],
-    }
-  },
+        radioData1: radioTextData.radioTextData[1],
+      }
+    },
     components: {
       SideBar,
       NaviBar,
@@ -72,7 +76,5 @@
 
 </script>
 <style scoped>
-  .head{
-    padding: 0;
-  }
+
 </style>
