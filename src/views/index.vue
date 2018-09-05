@@ -9,19 +9,16 @@
     <el-container class="content">
 
       <div class="side-bar">
-        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse"></navi-bar>
+        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse" ></navi-bar>
       </div>
 
       <el-main >
-
-        <el-radio-group v-model="isCollapse" size="mini">
-          <el-radio-button :label="false">展开</el-radio-button>
-          <el-radio-button :label="true">收起</el-radio-button>
-        </el-radio-group>
-
-        <el-row class="row-first"></el-row>
-
-
+        <el-row class="row-first">
+          <el-radio-group v-model="isCollapse" size="mini">
+            <el-radio-button :label="false">展开</el-radio-button>
+            <el-radio-button :label="true">收起</el-radio-button>
+          </el-radio-group>
+          </el-row>
         <el-row class="row-style">
           <search></search>
           <el-button type="success" @click="switchLang()">更换语言</el-button>
@@ -76,7 +73,8 @@
       RadioText,
       Echarts,
       EchartsBar,
-      Search
+      Search,
+      Lang
     },
 
     name: 'Main',
@@ -118,9 +116,6 @@
     background: #f0f2f5
   }
 
-  .side-bar {
-    height: 100%;
-  }
 
   .row-style {
     background: #fff;

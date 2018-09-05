@@ -7,7 +7,9 @@
     default-active="1"
     background-color="#545c64"
     text-color="#fff"
-    active-text-color="#ffd04b">
+    active-text-color="#ffd04b"
+    style="height: 100%"
+  >
 
     <!--第一层遍历-->
     <!--用组件name拼接索引作为子菜单的index编号，可以避免出现id混乱-->
@@ -88,6 +90,5 @@
 <style scoped>
   .el-menu-vertical:not(.el-menu--collapse) {
     width: 200px;
-    /*min-height: 400px;*/
   }
 </style>
