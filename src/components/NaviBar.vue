@@ -3,12 +3,11 @@
   <el-menu
     :mode="naviBarMode"
     :collapse="isCollapse"
-    :class="naviBarMode == 'vertical'? 'el-menu-vertical ' : ''"
+    :class="naviBarMode == 'vertical'? 'el-menu-vertical ' : 'el-menu-horizontal'"
     default-active="1"
     background-color="#545c64"
     text-color="#fff"
     active-text-color="#ffd04b"
-    style="height: 100%"
   >
 
     <!--第一层遍历-->
@@ -88,7 +87,12 @@
 
 </script>
 <style scoped lang="scss">
-  .el-menu-vertical:not(.el-menu--collapse) {
+  .el-menu-vertical{
     width: 200px;
+    height: 100%;
+  }
+
+  .el-menu-horizontal {
+
   }
 </style>
