@@ -107,7 +107,7 @@
     height: 100vh;
   }
   .content {
-    background: #f0f2f5
+    background: $content-bg-color;
   }
   .side-bar{
     overflow-y: auto;
