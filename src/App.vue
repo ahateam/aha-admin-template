@@ -30,8 +30,11 @@
 
     }
   }
-</script>
+</script >
 
-<style>
+<style scoped>
+:root{
+  --small-padding:10px 10px;
 
+}
 </style>

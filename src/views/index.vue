@@ -116,7 +116,9 @@
     background: #f0f2f5
   }
 
-
+.side-bar{
+  overflow-y: auto;
+}
   .row-style {
     background: #fff;
     margin-top: 20px;

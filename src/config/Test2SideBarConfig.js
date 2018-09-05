@@ -66,7 +66,44 @@ export default {
         }
       ]
     },
-
+    {
+      path: '/',
+      name: 'table',
+      icon: 'el-icon-time',
+      child: [
+        {
+          path: '/',
+          name: 'echarts',
+        },
+        {
+          path: '/',
+          name: 'set',
+        },
+        {
+          path: '/',
+          name: 'set1',
+        }
+      ]
+    },
+    {
+      path: '/',
+      name: 'table',
+      icon: 'el-icon-time',
+      child: [
+        {
+          path: '/',
+          name: 'echarts',
+        },
+        {
+          path: '/',
+          name: 'set',
+        },
+        {
+          path: '/',
+          name: 'set1',
+        }
+      ]
+    }
   ]
 };
 
