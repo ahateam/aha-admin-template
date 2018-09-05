@@ -18,7 +18,7 @@
                 :index="naviBarConfig.name + '-' + ind">
       <template slot="title" v-on:click="linkTo(item.path)">
         <i :class="item.icon"></i>
-        <span>{{item.name}}</span>
+        <span>{{$t('router.'+item.name)}}</span>
       </template>
 
       <!--第二层遍历-->
@@ -27,7 +27,7 @@
                   :key="childInd"
                   :index="naviBarConfig.name + '-' + ind + '-' + childInd">
         <template slot="title" v-on:click="linkTo(child.path)">
-          <span>{{child.name}}</span>
+          <span>{{$t('router.'+child.name)}}</span>
         </template>
 
         <!--第三层遍历-->
@@ -36,21 +36,21 @@
                       :key="grandChildInd"
                       :index="naviBarConfig.name + '-' + ind + '-' + childInd + '-' + grandChildInd"
                       v-on:click="linkTo(grandChild.path)">
-          {{grandChild.name}}
+          {{$t('router.'+grandChild.name)}}
         </el-menu-item>
       </el-submenu>
 
       <!--第二层遍历，只有一个节点-->
       <el-menu-item v-else :index="naviBarConfig.name + '-' + ind + '-' + childInd"
                     v-on:click="linkTo(child.path)">
-        {{child.name}}
+        {{$t('router.'+child.name)}}
       </el-menu-item>
     </el-submenu>
 
     <!--第一层遍历，只有一个节点-->
     <el-menu-item v-else :index="naviBarConfig.name + '-0'" v-on:click="linkTo(item.path)">
       <i :class="item.icon"></i>
-      <span>{{item.name}}</span>
+      <span>{{$t('router.'+item.name)}}</span>
     </el-menu-item>
 
 

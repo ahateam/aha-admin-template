@@ -3,66 +3,66 @@ export default {
   data: [
     {
       path: '/',
-      name: '系统首页',
+      name: 'home',
       icon: 'el-icon-time',
     },
     {
       path: '/',
-      name: '导航天梯',
+      name: 'document',
       icon: 'el-icon-time',
       child: [
         {
           path: '/',
-          name: '导航栏2',
+          name: 'document1',
           child: [
             {
               path: '/',
-              name: '导航栏31',
+              name: 'document2',
             },
             {
               path: '/',
-              name: '导航栏32',
+              name: 'document3',
             },
             {
               path: '/',
-              name: '导航栏33',
+              name: 'document4',
             }
           ]
         },
         {
           path: '/',
-          name: '导航栏二',
+          name: 'component',
         },
         {
           path: '/',
-          name: '导航栏三',
+          name: 'component1',
         },
         {
           path: '/',
-          name: '导航栏四',
+          name: 'component2',
         },
         {
           path: '/',
-          name: '导航栏五',
+          name: 'component3',
         }
       ]
     },
     {
       path: '/',
-      name: '系统设置',
+      name: 'table',
       icon: 'el-icon-time',
       child: [
         {
           path: '/',
-          name: '系统设置',
+          name: 'echarts',
         },
         {
           path: '/',
-          name: '登陆设置',
+          name: 'set',
         },
         {
           path: '/',
-          name: '用户设置',
+          name: 'set1',
         }
       ]
     },
