@@ -1,27 +1,21 @@
 <template>
 
-  <el-container class="content-box">
-    <el-header class="head">
+  <el-container class="content-box" style="  height: 100vh;">
+    <el-header class="head" >
       <navi-bar :naviBarConfig="naviBarConfig" :naviBarMode="'horizontal'"></navi-bar>
     </el-header>
-
-
-    <el-container class="content">
-
+    <el-container class="content" style="  height: 100vh;">
       <div class="side-bar">
-        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse"></navi-bar>
+        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse" style="height: 100%"></navi-bar>
       </div>
 
       <el-main >
-
-        <el-radio-group v-model="isCollapse" size="mini">
-          <el-radio-button :label="false">展开</el-radio-button>
-          <el-radio-button :label="true">收起</el-radio-button>
-        </el-radio-group>
-
-        <el-row class="row-first"></el-row>
-
-
+        <el-row class="row-first">
+          <el-radio-group v-model="isCollapse" size="mini">
+            <el-radio-button :label="false">展开</el-radio-button>
+            <el-radio-button :label="true">收起</el-radio-button>
+          </el-radio-group>
+        </el-row>
         <el-row class="row-style">
           <search></search>
           <el-button type="success" @click="switchLang()">更换语言</el-button>
@@ -43,7 +37,6 @@
         </el-row>
         <!--<router-view></router-view>-->
       </el-main>
-
     </el-container>
 
 
@@ -76,7 +69,8 @@
       RadioText,
       Echarts,
       EchartsBar,
-      Search
+      Search,
+      Lang
     },
 
     name: 'Main',
@@ -108,6 +102,7 @@
 
   .head {
     background-color: #545c64;
+    overflow: hidden;
   }
 
   .content-box {
