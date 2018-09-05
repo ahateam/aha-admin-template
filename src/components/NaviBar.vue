@@ -3,7 +3,7 @@
   <el-menu
     :mode="naviBarMode"
     :collapse="isCollapse"
-    :class="naviBarMode == 'vertical'? 'el-menu-vertical ' : 'el-menu-horizontal'"
+    :class="getCollapseStyle()"
     default-active="1"
     background-color="#545c64"
     text-color="#fff"
@@ -82,12 +82,28 @@
           this.$router.push(path);
         }
       },
+      getCollapseStyle() {
+        if (this.naviBarMode == "vertical") {
+          if (this.isCollapse) {
+            return "el-menu-vertical-collapse";
+          } else {
+            return "el-menu-vertical";
+          }
+        } else {
+          return "el-menu-horizontal";
+        }
+      }
     }
   }
 
 </script>
 <style scoped lang="scss">
-  .el-menu-vertical{
+
+  .el-menu-vertical-collapse {
+    height: 100%;
+  }
+
+  .el-menu-vertical {
     width: 200px;
     height: 100%;
   }
