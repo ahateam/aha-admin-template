@@ -40,10 +40,7 @@
         </el-row>
         <!--<router-view></router-view>-->
       </el-main>
-
     </el-container>
-
-
   </el-container>
 
 </template>
@@ -102,30 +99,26 @@
   }
 
 </script>
-<style scoped>
-
+<style  scoped lang="scss">
   .head {
-    background-color: #545c64;
+    background-color: $navi-bg-color;
   }
-
   .content-box {
     height: 100vh;
   }
-
   .content {
     background: #f0f2f5
   }
-
-.side-bar{
-  overflow-y: auto;
-}
-  .row-style {
-    background: #fff;
-    margin-top: 20px;
-    padding: 10px 10px;
+  .side-bar{
+    overflow-y: auto;
   }
   .row-first{
     background: #fff;
-    padding: 10px 10px;
+    padding:$small-padding;
+  }
+  .row-style{
+    background: #fff;
+    margin-top: 20px;
+    padding: $small-padding;
   }
 </style>

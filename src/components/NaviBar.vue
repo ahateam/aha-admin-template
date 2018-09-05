@@ -87,7 +87,7 @@
   }
 
 </script>
-<style scoped>
+<style scoped lang="scss">
   .el-menu-vertical:not(.el-menu--collapse) {
     width: 200px;
   }
