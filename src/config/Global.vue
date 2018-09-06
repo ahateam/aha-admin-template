@@ -7,9 +7,9 @@
 
 
     export default {
-      naviBarTextColor,             //导航栏字体颜色
-      naviBarBgColor,               //导航栏背景色
-      naviBarActiveColor,           //导航栏选择效果
+      naviBarTextColor: naviBarTextColor,             //导航栏字体颜色
+      naviBarBgColor: naviBarBgColor,               //导航栏背景色
+      naviBarActiveColor: naviBarActiveColor,           //导航栏选择效果
     }
 
 

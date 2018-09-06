@@ -7,6 +7,10 @@ import login from '@/views/login'
 import register from '@/views/register'
 
 
+import test1 from '@/views/test/test1'
+import test2 from '@/views/test/test2'
+
+
 Vue.use(Router);
 
 
@@ -20,26 +24,34 @@ export const sitemapRouters = [
     path: '/error',
     name: 'error',
     component: error,
-    meta: {title: '错误'},
   },
 
   {
     path: '/index',
     name: 'index',
     component: index,
-    meta: {title: '首页'}
+    children: [
+      {
+        path: '/test1',
+        name: 'test1',
+        component: test1,
+      },
+      {
+        path: '/test2',
+        name: 'test2',
+        component: test2,
+      },
+    ]
   },
   {
     path: '/login',
     name: 'login',
     component: login,
-    meta: {title: '登录'}
   },
   {
     path: '/register',
     name: 'register',
     component: register,
-    meta: {title: '注册'}
   },
 
 ];

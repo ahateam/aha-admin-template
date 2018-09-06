@@ -1,24 +1,31 @@
 <template>
 
   <el-container class="content-box">
-    <el-header  :style="{background:this.GLOBAL.naviBarBgColor}">
-      <navi-bar :naviBarConfig="naviBarConfig" :naviBarMode="'horizontal'"  :naviBarBgColor="this.GLOBAL.naviBarBgColor" :naviBarActiveColor="this.GLOBAL.naviBarActiveColor" :naviBarTextColor="this.GLOBAL.naviBarTextColor"></navi-bar>
+    <el-header :style="{background:this.GLOBAL.naviBarBgColor}">
+      <top-bar :topBarConfig="topBarConfig"
+               :bgColor="this.GLOBAL.naviBarBgColor"
+               :activeTextColor="this.GLOBAL.naviBarActiveColor"
+               :textColor="this.GLOBAL.naviBarTextColor"></top-bar>
     </el-header>
 
 
     <el-container class="content">
 
       <div class="side-bar">
-        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse"  :naviBarBgColor="this.GLOBAL.naviBarBgColor" :naviBarActiveColor="this.GLOBAL.naviBarActiveColor" :naviBarTextColor="this.GLOBAL.naviBarTextColor"></navi-bar>
+        <side-bar :sideBarConfig="sideBarConfig"
+                  :isCollapse="isCollapse"
+                  :bgColor="this.GLOBAL.naviBarBgColor"
+                  :activeTextColor="this.GLOBAL.naviBarActiveColor"
+                  :textColor="this.GLOBAL.naviBarTextColor"></side-bar>
       </div>
 
-      <el-main >
+      <el-main>
         <el-row class="row-first">
           <el-radio-group v-model="isCollapse" size="mini">
             <el-radio-button :label="false">{{$t('content.open')}}</el-radio-button>
             <el-radio-button :label="true">{{$t('content.pack_up')}}</el-radio-button>
           </el-radio-group>
-          </el-row>
+        </el-row>
         <el-row class="row-style">
           <search></search>
           <el-button type="success" @click="switchLang()">{{$t('content.change_language')}}</el-button>
@@ -38,7 +45,8 @@
         <el-row>
           <lang></lang>
         </el-row>
-        <!--<router-view></router-view>-->
+
+        <router-view></router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -47,7 +55,8 @@
 
 <script>
 
-  import NaviBar from '@/components/NaviBar.vue';
+  import TopBar from '@/components/TopBar.vue';
+  import SideBar from '@/components/SideBar.vue';
   import RadioText from '@/components/RadioText.vue';
   import Echarts from '@/components/Echats.vue';
 
@@ -56,17 +65,17 @@
   import EchartsBar from '@/components/EchartsBar.vue';
   import Search from '@/components/Search.vue';
 
-  import test1SideBarConfig from '@/config/Test1SideBarConfig.js';
-  import test2SideBarConfig from '@/config/Test2SideBarConfig.js';
+  import topBarConfig from '@/config/TestTopBarConfig.js';
+  import sideBarConfig from '@/config/TestSideBarConfig.js';
 
   import radioTextData from '@/config/RadioTextData.js'
-
 
 
   export default {
 
     components: {
-      NaviBar,
+      TopBar,
+      SideBar,
       RadioText,
       Echarts,
       EchartsBar,
@@ -75,11 +84,11 @@
     },
 
     name: 'Main',
-    methods:{
-      switchLang()  {
-        if(this.$i18n.locale == 'en'){
+    methods: {
+      switchLang() {
+        if (this.$i18n.locale == 'en') {
           this.$i18n.locale = 'cn'
-        }else{
+        } else {
           this.$i18n.locale = 'en'
         }
       }
@@ -87,8 +96,8 @@
 
     data() {
       return {
-        sideBarConfig: test2SideBarConfig,
-        naviBarConfig: test1SideBarConfig,
+        topBarConfig: topBarConfig,
+        sideBarConfig: sideBarConfig,
         isCollapse: false,
         radioData: radioTextData.radioTextData[0],
         radioData1: radioTextData.radioTextData[1],
@@ -99,22 +108,26 @@
   }
 
 </script>
-<style  scoped lang="scss">
+<style scoped lang="scss">
 
   .content-box {
     height: 100vh;
   }
+
   .content {
     background: $content-bg-color;
   }
-  .side-bar{
+
+  .side-bar {
     overflow-y: auto;
   }
-  .row-first{
+
+  .row-first {
     background: #fff;
-    padding:$small-padding;
+    padding: $small-padding;
   }
-  .row-style{
+
+  .row-style {
     background: #fff;
     margin-top: 20px;
     padding: $small-padding;
