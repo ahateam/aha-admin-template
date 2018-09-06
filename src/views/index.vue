@@ -2,14 +2,14 @@
 
   <el-container class="content-box">
     <el-header class="head">
-      <navi-bar :naviBarConfig="naviBarConfig" :naviBarMode="'horizontal'"></navi-bar>
+      <navi-bar :naviBarConfig="naviBarConfig" :naviBarMode="'horizontal'"  :naviBarBgColor="this.GLOBAL.naviBarBgColor" :naviBarActiveColor="this.GLOBAL.naviBarActiveColor" :naviBarTextColor="this.GLOBAL.naviBarTextColor"></navi-bar>
     </el-header>
 
 
     <el-container class="content">
 
       <div class="side-bar">
-        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse" ></navi-bar>
+        <navi-bar :naviBarConfig="sideBarConfig" :naviBarMode="'vertical'" :isCollapse="isCollapse"  :naviBarBgColor="this.GLOBAL.naviBarBgColor" :naviBarActiveColor="this.GLOBAL.naviBarActiveColor" :naviBarTextColor="this.GLOBAL.naviBarTextColor"></navi-bar>
       </div>
 
       <el-main >
@@ -121,4 +121,5 @@
     margin-top: 20px;
     padding: $small-padding;
   }
+
 </style>

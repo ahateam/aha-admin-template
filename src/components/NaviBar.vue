@@ -5,9 +5,9 @@
     :collapse="isCollapse"
     :class="getCollapseStyle()"
     default-active="1"
-    background-color="#545c64"
-    text-color="#fff"
-    active-text-color="#ffd04b"
+    :background-color="naviBarBgColor"
+    :text-color="naviBarTextColor"
+    :active-text-color="naviBarActiveColor"
   >
 
     <!--第一层遍历-->
@@ -73,6 +73,18 @@
         type: Boolean,
         required: false,
         default: false
+      },
+      naviBarBgColor: {
+        type: String,
+        default: '#545c64'
+      },
+      naviBarActiveColor: {
+        type: String,
+        default:'#ffd04b'
+      },
+      naviBarTextColor: {
+        type: String,
+        default:'#fff'
       }
     },
     methods: {
@@ -108,7 +120,4 @@
     height: 100%;
   }
 
-  .el-menu-horizontal {
-
-  }
 </style>
