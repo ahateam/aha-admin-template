@@ -1,7 +1,7 @@
 <template>
 
   <el-container class="content-box">
-    <el-header class="head">
+    <el-header  :style="{background:this.GLOBAL.naviBarBgColor}">
       <navi-bar :naviBarConfig="naviBarConfig" :naviBarMode="'horizontal'"  :naviBarBgColor="this.GLOBAL.naviBarBgColor" :naviBarActiveColor="this.GLOBAL.naviBarActiveColor" :naviBarTextColor="this.GLOBAL.naviBarTextColor"></navi-bar>
     </el-header>
 
@@ -100,9 +100,7 @@
 
 </script>
 <style  scoped lang="scss">
-  .head {
-    background-color: $navi-bg-color;
-  }
+
   .content-box {
     height: 100vh;
   }
