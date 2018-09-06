@@ -15,13 +15,13 @@
       <el-main >
         <el-row class="row-first">
           <el-radio-group v-model="isCollapse" size="mini">
-            <el-radio-button :label="false">展开</el-radio-button>
-            <el-radio-button :label="true">收起</el-radio-button>
+            <el-radio-button :label="false">{{$t('content.open')}}</el-radio-button>
+            <el-radio-button :label="true">{{$t('content.pack_up')}}</el-radio-button>
           </el-radio-group>
           </el-row>
         <el-row class="row-style">
           <search></search>
-          <el-button type="success" @click="switchLang()">更换语言</el-button>
+          <el-button type="success" @click="switchLang()">{{$t('content.change_language')}}</el-button>
         </el-row>
         <el-row class="row-style">
           <radio-text :radioData="radioData"></radio-text>

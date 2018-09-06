@@ -1,10 +1,10 @@
 const radioTextData =[
   {
-    title: '发送状态',
-    texts: ['全部', '待发送', '发送中', '发送成功', '发送失败']
+    title: 'delivery_status',
+    texts: ['all', 'to_be_sent', 'sending', 'send_a_success', 'send_failure']
   }, {
-    title: '发送事件',
-    texts: ['点击', '自动', '手动触发', '发送成功','发送成功', '发送失败']
+    title: 'send_the_event',
+    texts: ['click', 'auto', 'manual_trigger', 'send_a_success','send_a_success', 'send_failure']
   }
 ];
 export default {

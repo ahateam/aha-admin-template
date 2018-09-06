@@ -2,7 +2,7 @@
     <div>
       <el-col :span="5" style="margin-left: 15px" >
         <el-input placeholder="请输入内容" class="input-with-select">
-          <el-button id="btnset" slot="append" >搜索</el-button>
+          <el-button id="btnset" slot="append" >{{$t('content.search')}}</el-button>
         </el-input>
       </el-col>
     </div>
