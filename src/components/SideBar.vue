@@ -86,24 +86,17 @@
     },
     methods: {
       linkTo(path) {
-        console.info("navi-bar-goto>>>" + path);
+        console.info("side-bar-goto>>>" + path);
         if (path != null) {
           this.$router.push(path);
         }
       },
-      getCollapseStyle() {
-        if (this.isCollapse) {
-          return "el-menu-vertical-collapse";
-        } else {
-          return "el-menu-vertical";
-        }
-      }
     }
   }
 
 </script>
 <style scoped lang="scss">
   .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
+    width: 250px;
   }
 </style>
