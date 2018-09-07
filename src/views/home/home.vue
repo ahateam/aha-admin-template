@@ -32,21 +32,17 @@
   import EchartsBar from '@/components/EchartsBar.vue';
   import Search from '@/components/Search.vue';
 
-
-
   import radioTextData from '@/config/RadioTextData.js'
 
     export default {
         name: "home",
-
-      components: {
-        RadioText,
-        Echarts,
-        EchartsBar,
-        Search,
-        Lang
-      },
-
+        components: {
+          RadioText,
+          Echarts,
+          EchartsBar,
+          Search,
+          Lang
+        },
       methods: {
         switchLang() {
           if (this.$i18n.locale == 'en') {

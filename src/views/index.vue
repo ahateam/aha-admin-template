@@ -76,7 +76,7 @@
         topBarConfig: topBarConfig,
         sideBarConfig: sideBarConfig,
         alertTitle:'操作成功',
-        alertCode:'1'
+        alertCode:1
       }
     },
 
@@ -109,6 +109,6 @@
   padding: 0;
 }
   .main-content{
-    padding: 20px 20px;
+    padding:$small-padding;
   }
 </style>
