@@ -19,34 +19,33 @@
                   :textColor="this.GLOBAL.naviBarTextColor"></side-bar>
       </div>
 
-      <el-main>
+      <el-main class="main-box">
         <el-row class="row-first">
+        <el-col :span="4">
           <el-radio-group v-model="isCollapse" size="mini">
             <el-radio-button :label="false">{{$t('content.open')}}</el-radio-button>
             <el-radio-button :label="true">{{$t('content.pack_up')}}</el-radio-button>
           </el-radio-group>
-        </el-row>
-        <el-row class="row-style">
-          <search></search>
-          <el-button type="success" @click="switchLang()">{{$t('content.change_language')}}</el-button>
-        </el-row>
-        <el-row class="row-style">
-          <radio-text :radioData="radioData"></radio-text>
-          <radio-text :radioData="radioData1"></radio-text>
-        </el-row>
-        <el-row class="row-style">
-          <el-col :span="12">
-            <echarts></echarts>
-          </el-col>
-          <el-col :span="12">
-            <echarts-bar></echarts-bar>
+        </el-col>
+          <el-col :span="18"  >
+              <el-breadcrumb separator="/" >
+                <el-breadcrumb-item class="text-item" :to="{ path: '/' }">首页</el-breadcrumb-item>
+                <el-breadcrumb-item><a href="/"  class="text-item">活动管理</a></el-breadcrumb-item>
+                <el-breadcrumb-item  class="text-item">活动列表</el-breadcrumb-item>
+                <el-breadcrumb-item  class="text-item">活动详情</el-breadcrumb-item>
+              </el-breadcrumb>
           </el-col>
         </el-row>
         <el-row>
-          <lang></lang>
+          <el-col :span="24" style="background: #67c23a;height: 22px;">
+
+          </el-col>
         </el-row>
 
-        <router-view></router-view>
+        <div class="main-content">
+          <router-view></router-view>
+        </div>
+
       </el-main>
     </el-container>
   </el-container>
@@ -54,21 +53,10 @@
 </template>
 
 <script>
-
   import TopBar from '@/components/TopBar.vue';
   import SideBar from '@/components/SideBar.vue';
-  import RadioText from '@/components/RadioText.vue';
-  import Echarts from '@/components/Echats.vue';
-
-  import Lang from '@/components/Lang.vue';
-
-  import EchartsBar from '@/components/EchartsBar.vue';
-  import Search from '@/components/Search.vue';
-
   import topBarConfig from '@/config/TestTopBarConfig.js';
   import sideBarConfig from '@/config/TestSideBarConfig.js';
-
-  import radioTextData from '@/config/RadioTextData.js'
 
 
   export default {
@@ -76,31 +64,13 @@
     components: {
       TopBar,
       SideBar,
-      RadioText,
-      Echarts,
-      EchartsBar,
-      Search,
-      Lang
     },
-
     name: 'Main',
-    methods: {
-      switchLang() {
-        if (this.$i18n.locale == 'en') {
-          this.$i18n.locale = 'cn'
-        } else {
-          this.$i18n.locale = 'en'
-        }
-      }
-    },
-
     data() {
       return {
+        isCollapse: false,
         topBarConfig: topBarConfig,
         sideBarConfig: sideBarConfig,
-        isCollapse: false,
-        radioData: radioTextData.radioTextData[0],
-        radioData1: radioTextData.radioTextData[1],
       }
     },
 
@@ -109,11 +79,18 @@
 
 </script>
 <style scoped lang="scss">
-
   .content-box {
     height: 100vh;
   }
 
+  .row-first {
+    background: #fff;
+    padding: $small-padding;
+
+  }
+  .text-item{
+    line-height: 28px;
+  }
   .content {
     background: $content-bg-color;
   }
@@ -121,16 +98,10 @@
   .side-bar {
     overflow-y: auto;
   }
-
-  .row-first {
-    background: #fff;
-    padding: $small-padding;
+.main-box{
+  padding: 0;
+}
+  .main-content{
+    padding: 20px 20px;
   }
-
-  .row-style {
-    background: #fff;
-    margin-top: 20px;
-    padding: $small-padding;
-  }
-
 </style>

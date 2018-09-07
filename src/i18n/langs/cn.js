@@ -28,6 +28,7 @@ const cn = {
     'test': '测试',
     'test1': '测试1',
     'test2': '测试2',
+    'manage': '管理页面'
   },
   content: {
     'open': '展开',

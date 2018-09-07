@@ -6,9 +6,8 @@ import index from '@/views/index'
 import login from '@/views/login'
 import register from '@/views/register'
 
-
-import test1 from '@/views/test/test1'
-import test2 from '@/views/test/test2'
+import home from '@/views/home/home'
+import manage from  '@/views/manage/manage'
 
 
 Vue.use(Router);
@@ -18,7 +17,7 @@ Vue.use(Router);
 export const sitemapRouters = [
   {
     path: '/',
-    redirect: '/index',
+    redirect: '/home',
   },
   {
     path: '/error',
@@ -32,15 +31,15 @@ export const sitemapRouters = [
     component: index,
     children: [
       {
-        path: '/test1',
-        name: 'test1',
-        component: test1,
+        path: '/home',
+        name: 'home',
+        component: home,
       },
       {
-        path: '/test2',
-        name: 'test2',
-        component: test2,
-      },
+        path: '/manage',
+        name: 'manage',
+        component: manage,
+      }
     ]
   },
   {

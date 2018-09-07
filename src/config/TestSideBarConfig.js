@@ -8,17 +8,13 @@ export default {
     },
     {
       path: '/',
-      name: 'test',
+      name: 'manage',
       icon: 'el-icon-time',
       child: [
         {
-          path: '/test1',
-          name: 'test1',
-        },
-        {
-          path: '/test2',
-          name: 'test2',
-        },
+          path: '/manage',
+          name: 'manage',
+        }
       ]
     },
     {
