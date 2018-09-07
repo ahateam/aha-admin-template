@@ -29,6 +29,10 @@ export default {
         {
           path:'/componentsForm',
           name:'form'
+        },
+        {
+          path:'/componentsEcharts',
+          name:'Echarts'
         }
       ]
     },

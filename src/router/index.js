@@ -10,7 +10,7 @@ import home from '@/views/home/home'
 import manage from  '@/views/manage/manage'
 import manageForm from '@/views/manage/manageform'
 import componentsForm from '@/views/components/form'
-
+import componentsEcharts from '@/views/components/echarts'
 
 Vue.use(Router);
 
@@ -51,6 +51,11 @@ export const sitemapRouters = [
         path: '/componentsForm',
         name: 'componentsForm',
         component: componentsForm,
+      },
+      {
+        path: '/componentsEcharts',
+        name: 'componentsEcharts',
+        component: componentsEcharts,
       }
     ]
   },

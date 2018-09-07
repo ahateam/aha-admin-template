@@ -27,7 +27,8 @@ const en = {
     'manage':'Manage Page',
     'manageform':'Manage Form',
     'form':'Form',
-    'components':'Components'
+    'components':'Components',
+    'Echarts':'Echarts'
   },
   content: {
     'open' : 'Open',

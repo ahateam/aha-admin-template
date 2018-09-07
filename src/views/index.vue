@@ -103,8 +103,10 @@
 
   .side-bar {
     overflow-y: auto;
-
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
   }
+  .side-bar::-webkit-scrollbar { width: 0 !important }
 .main-box{
   padding: 0;
 }

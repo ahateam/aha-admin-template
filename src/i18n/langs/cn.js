@@ -31,7 +31,8 @@ const cn = {
     'manage': '管理页面',
     'manageform':'管理表单页面',
     'form':'表单组件',
-    'components':'组件'
+    'components':'组件',
+    'Echarts':'Echarts',
   },
   content: {
     'open': '展开',
