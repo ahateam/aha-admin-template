@@ -24,7 +24,8 @@ const en = {
     'set5':'Set 5',
     'set6':'Set 6',
     'set7':'Set 7',
-    'manage':'Manage Page'
+    'manage':'Manage Page',
+    'manageform':'Manage Form'
   },
   content: {
     'open' : 'Open',

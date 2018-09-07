@@ -14,6 +14,10 @@ export default {
         {
           path: '/manage',
           name: 'manage',
+        },
+        {
+          path: '/manageform',
+          name: 'manageform',
         }
       ]
     },

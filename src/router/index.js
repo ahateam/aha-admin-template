@@ -8,7 +8,7 @@ import register from '@/views/register'
 
 import home from '@/views/home/home'
 import manage from  '@/views/manage/manage'
-
+import manageForm from '@/views/manage/manageform'
 
 Vue.use(Router);
 
@@ -39,6 +39,11 @@ export const sitemapRouters = [
         path: '/manage',
         name: 'manage',
         component: manage,
+      },
+      {
+        path: '/manageform',
+        name: 'manageform',
+        component: manageForm,
       }
     ]
   },

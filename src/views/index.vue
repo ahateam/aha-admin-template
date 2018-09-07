@@ -97,6 +97,7 @@
 
   .side-bar {
     overflow-y: auto;
+
   }
 .main-box{
   padding: 0;
