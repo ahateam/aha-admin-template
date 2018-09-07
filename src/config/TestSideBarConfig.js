@@ -22,6 +22,17 @@ export default {
       ]
     },
     {
+      path:'/',
+      name:'components',
+      icon:'el-icon-time',
+      child:[
+        {
+          path:'/componentsForm',
+          name:'form'
+        }
+      ]
+    },
+    {
       path: '/',
       name: 'document',
       icon: 'el-icon-time',

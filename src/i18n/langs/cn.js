@@ -29,7 +29,9 @@ const cn = {
     'test1': '测试1',
     'test2': '测试2',
     'manage': '管理页面',
-    'manageform':'管理表单页面'
+    'manageform':'管理表单页面',
+    'form':'表单组件',
+    'components':'组件'
   },
   content: {
     'open': '展开',

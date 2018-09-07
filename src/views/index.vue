@@ -38,10 +38,13 @@
         </el-row>
         <el-row>
           <el-col :span="24" style="background: #67c23a;height: 22px;">
-
           </el-col>
         </el-row>
-
+        <el-row>
+          <el-col :span="24">
+            <alert-top :alertTitle="alertTitle" :alertCode="alertCode"></alert-top>
+          </el-col>
+        </el-row>
         <div class="main-content">
           <router-view></router-view>
         </div>
@@ -57,13 +60,14 @@
   import SideBar from '@/components/SideBar.vue';
   import topBarConfig from '@/config/TestTopBarConfig.js';
   import sideBarConfig from '@/config/TestSideBarConfig.js';
-
+  import AlertTop from '@/components/Alert'
 
   export default {
 
     components: {
       TopBar,
       SideBar,
+      AlertTop,
     },
     name: 'Main',
     data() {
@@ -71,6 +75,8 @@
         isCollapse: false,
         topBarConfig: topBarConfig,
         sideBarConfig: sideBarConfig,
+        alertTitle:'操作成功',
+        alertCode:'1'
       }
     },
 
