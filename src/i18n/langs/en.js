@@ -2,8 +2,8 @@ import enLocale from 'element-ui/lib/locale/lang/en'
 const en = {
   router:{
     'home' : 'Home',
-    'document' : 'Documente',
-    'document1':'Documente1',
+    'document' : 'Document',
+    'documentSet':'Set Document',
     'document2':'Documente2',
     'document3':'Documente3',
     'document4':'Documente4',
@@ -28,7 +28,17 @@ const en = {
     'manageform':'Manage Form',
     'form':'Form',
     'components':'Components',
-    'Echarts':'Echarts'
+    'Echarts':'Echarts',
+    'componentsDocument': 'Components Document',
+    'checkedComponents':'Checked Components',
+    'inputComponents':'Input Components',
+    'selectComponents':'Select Components',
+    'Timer Components': 'Time and Date',
+    'uploadComponents':'Upload Components',
+    'formCenter':'Form Center',
+    'btnComponents':'Button Components',
+    'tableCenter':'Table Center',
+    'VCharts':'V-Charts'
   },
   content: {
     'open' : 'Open',

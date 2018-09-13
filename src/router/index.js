@@ -7,10 +7,19 @@ import login from '@/views/login'
 import register from '@/views/register'
 
 import home from '@/views/home/home'
-import manage from  '@/views/manage/manage'
-import manageForm from '@/views/manage/manageform'
-import componentsForm from '@/views/components/form'
-import componentsEcharts from '@/views/components/echarts'
+import document from '@/views/document/document'
+import componentsDocument from '@/views/document/componentsDocument'
+import checkedComponents from '@/views/components/checkedComponents'
+import inputComponents from '@/views/components/inputComponents'
+import selectComponents from  '@/views/components/selectComponents'
+import timerComponents from  '@/views/components/timerComponents'
+import uploadComponents from  '@/views/components/uploadComponents'
+import formCenter from  '@/views/form/formCenter'
+import btnComponents from  '@/views/components/btnComponents'
+import tableCenter from  '@/views/table/tableCenter'
+import VCharts from  '@/views/table/VCharts'
+
+
 
 Vue.use(Router);
 
@@ -38,25 +47,62 @@ export const sitemapRouters = [
         component: home,
       },
       {
-        path: '/manage',
-        name: 'manage',
-        component: manage,
+        path: '/document',
+        name: 'document',
+        component: document,
       },
       {
-        path: '/manageform',
-        name: 'manageform',
-        component: manageForm,
+        path:'/componentsDocument',
+        name:'componentsDocument',
+        component:componentsDocument
       },
       {
-        path: '/componentsForm',
-        name: 'componentsForm',
-        component: componentsForm,
+        path:'/checkedComponents',
+        name:'checkedComponents',
+        component:checkedComponents
       },
       {
-        path: '/componentsEcharts',
-        name: 'componentsEcharts',
-        component: componentsEcharts,
-      }
+        path:'/inputComponents',
+        name:'inputComponents',
+        component:inputComponents
+      },
+      {
+        path:'/selectComponents',
+        name:'selectComponents',
+        component:selectComponents
+      },
+      {
+        path:'/timerComponents',
+        name:'timerComponents',
+        component:timerComponents
+      },
+      {
+        path:'/uploadComponents',
+        name:'uploadComponents',
+        component:uploadComponents
+      },
+      {
+        path:'/formCenter',
+        name:'formCenter',
+        component:formCenter
+      },
+      {
+        path:'/btnComponents',
+        name:'btnComponents',
+        component:btnComponents
+      },
+      {
+        path:'/tableCenter',
+        name:'tableCenter',
+        component:tableCenter
+      },
+      {
+        path:'/VCharts',
+        name:'VCharts',
+        component:VCharts
+      },
+
+
     ]
   },
   {

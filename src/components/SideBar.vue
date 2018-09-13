@@ -45,6 +45,9 @@
                     v-on:click="linkTo(child.path)">
         {{$t('router.'+child.name)}}
       </el-menu-item>
+
+
+
     </el-submenu>
 
     <!--第一层遍历，只有一个节点-->

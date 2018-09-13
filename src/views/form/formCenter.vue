@@ -1,12 +1,12 @@
 <template>
-  <div>
-    asd
-  </div>
+    <div>
+      form 表单示例
+    </div>
 </template>
 
 <script>
     export default {
-        name: "form"
+        name: "formCenter"
     }
 </script>
 

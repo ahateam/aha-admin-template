@@ -8,16 +8,16 @@ export default {
     },
     {
       path: '/',
-      name: 'manage',
+      name: 'document',
       icon: 'el-icon-time',
       child: [
         {
-          path: '/manage',
-          name: 'manage',
+          path: '/document',
+          name: 'documentSet',
         },
         {
-          path: '/manageform',
-          name: 'manageform',
+          path:'componentsDocument',
+          name:'componentsDocument'
         }
       ]
     },
@@ -27,53 +27,39 @@ export default {
       icon:'el-icon-time',
       child:[
         {
-          path:'/componentsForm',
-          name:'form'
+          path:'/btnComponents',
+          name:'btnComponents'
         },
         {
-          path:'/componentsEcharts',
-          name:'Echarts'
+          path:'/checkedComponents',
+          name:'checkedComponents'
+        },
+        {
+          path:'/inputComponents',
+          name:'inputComponents'
+        },
+        {
+          path:'/selectComponents',
+          name:'selectComponents'
+        },
+        {
+          path:'/timerComponents',
+          name:'timerComponents'
+        },
+        {
+          path:'/uploadComponents',
+          name:'uploadComponents'
         }
       ]
     },
     {
       path: '/',
-      name: 'document',
+      name: 'formCenter',
       icon: 'el-icon-time',
       child: [
         {
-          path: '/',
-          name: 'document1',
-          child: [
-            {
-              path: '/',
-              name: 'document2',
-            },
-            {
-              path: '/',
-              name: 'document3',
-            },
-            {
-              path: '/',
-              name: 'document4',
-            }
-          ]
-        },
-        {
-          path: '/',
-          name: 'component',
-        },
-        {
-          path: '/',
-          name: 'component1',
-        },
-        {
-          path: '/',
-          name: 'component2',
-        },
-        {
-          path: '/',
-          name: 'component3',
+          path: '/formCenter',
+          name: 'formCenter',
         }
       ]
     },
@@ -83,57 +69,15 @@ export default {
       icon: 'el-icon-time',
       child: [
         {
-          path: '/',
-          name: 'echarts',
+          path: '/tableCenter',
+          name: 'tableCenter',
         },
         {
-          path: '/',
-          name: 'set',
-        },
-        {
-          path: '/',
-          name: 'set1',
+          path: '/VCharts',
+          name: 'VCharts',
         }
       ]
     },
-    {
-      path: '/',
-      name: 'table',
-      icon: 'el-icon-time',
-      child: [
-        {
-          path: '/',
-          name: 'echarts',
-        },
-        {
-          path: '/',
-          name: 'set',
-        },
-        {
-          path: '/',
-          name: 'set1',
-        }
-      ]
-    },
-    {
-      path: '/',
-      name: 'table',
-      icon: 'el-icon-time',
-      child: [
-        {
-          path: '/',
-          name: 'echarts',
-        },
-        {
-          path: '/',
-          name: 'set',
-        },
-        {
-          path: '/',
-          name: 'set1',
-        }
-      ]
-    }
   ]
 };
 
