@@ -38,7 +38,11 @@ const en = {
     'formCenter':'Form Center',
     'btnComponents':'Button Components',
     'tableCenter':'Table Center',
-    'VCharts':'V-Charts'
+    'VCharts':'V-Charts',
+    'zyProductCenter':'Product Center',
+    'showPage': 'Show Page',
+    'zyProductList':'Product List',
+
   },
   content: {
     'open' : 'Open',

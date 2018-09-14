@@ -18,8 +18,8 @@ import formCenter from  '@/views/form/formCenter'
 import btnComponents from  '@/views/components/btnComponents'
 import tableCenter from  '@/views/table/tableCenter'
 import VCharts from  '@/views/table/VCharts'
-
-
+import zyProductCenter from '@/views/showPage/zyProductCenter'
+import zyProductList from '@/views/showPage/zyProductList'
 
 Vue.use(Router);
 
@@ -101,6 +101,17 @@ export const sitemapRouters = [
         name:'VCharts',
         component:VCharts
       },
+      {
+        path:'/zyProductCenter',
+        name:'zyProductCenter',
+        component:zyProductCenter
+      },
+      {
+        path:'/zyProductList',
+        name:'zyProductList',
+        component:zyProductList
+      },
+
 
 
     ]

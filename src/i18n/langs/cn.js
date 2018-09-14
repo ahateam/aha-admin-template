@@ -43,6 +43,10 @@ const cn = {
     'btnComponents':'按钮组件',
     'tableCenter':'表格组件',
     'VCharts':'V-Charts',
+    'zyProductCenter':'中源产品中心',
+    'showPage':'展示页面',
+    'zyProductList':'中源产品列表',
+
   },
   content: {
     'open': '展开',

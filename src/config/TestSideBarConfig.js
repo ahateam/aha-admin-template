@@ -78,6 +78,22 @@ export default {
         }
       ]
     },
+    {
+      path:'/',
+      name:'showPage',
+      icon:'el-icon-time',
+      child:[
+        {
+          path:'/zyProductCenter',
+          name:'zyProductCenter'
+        },
+        {
+          path:'/zyProductList',
+          name:'zyProductList'
+        },
+
+      ]
+    }
   ]
 };
 
