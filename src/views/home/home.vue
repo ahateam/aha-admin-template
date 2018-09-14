@@ -11,10 +11,10 @@
     </el-row>
     <el-row class="row-style">
       <el-col :span="12">
-        <echarts></echarts>
+
       </el-col>
       <el-col :span="12">
-        <echarts-bar></echarts-bar>
+
       </el-col>
     </el-row>
     <el-row>
