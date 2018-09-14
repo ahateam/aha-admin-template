@@ -23,6 +23,17 @@ export default {
     },
     {
       path:'/',
+      name:'layout',
+      icon:'el-icon-time',
+      child:[
+        {
+          path: '/layout',
+          name: 'layout',
+        }
+      ]
+    },
+    {
+      path:'/',
       name:'components',
       icon:'el-icon-time',
       child:[

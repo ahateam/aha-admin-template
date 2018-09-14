@@ -42,7 +42,7 @@ const en = {
     'zyProductCenter':'Product Center',
     'showPage': 'Show Page',
     'zyProductList':'Product List',
-
+    'layout':'LayOut'
   },
   content: {
     'open' : 'Open',

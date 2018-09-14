@@ -46,7 +46,7 @@ const cn = {
     'zyProductCenter':'中源产品中心',
     'showPage':'展示页面',
     'zyProductList':'中源产品列表',
-
+    'layout':'布局详解'
   },
   content: {
     'open': '展开',

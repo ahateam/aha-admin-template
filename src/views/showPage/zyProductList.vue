@@ -87,7 +87,7 @@
       <el-col :span="24" style="margin-top: 8px;">
         <content-title :title="title3"></content-title>
         <el-row   style="padding-top: 15px;padding-bottom: 25px; background: #fff">
-          
+
         </el-row>
       </el-col>
     </el-row>

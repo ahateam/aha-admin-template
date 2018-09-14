@@ -20,7 +20,7 @@ import tableCenter from  '@/views/table/tableCenter'
 import VCharts from  '@/views/table/VCharts'
 import zyProductCenter from '@/views/showPage/zyProductCenter'
 import zyProductList from '@/views/showPage/zyProductList'
-
+import layout from '@/views/layout/layout'
 Vue.use(Router);
 
 
@@ -111,7 +111,11 @@ export const sitemapRouters = [
         name:'zyProductList',
         component:zyProductList
       },
-
+      {
+        path:'/layout',
+        name:'layout',
+        component:layout
+      }
 
 
     ]
