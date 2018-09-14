@@ -5,7 +5,13 @@
           <el-row :gutter="20">
             <el-col :span="12">
               <div class="img-box">
-                <img src="@/assets/image/layout1.png" alt="">
+                <section class="el-container is-vertical">
+                  <header class="el-header header-box" >Header</header>
+                  <section class="el-container">
+                  <aside class="el-aside asilde-box" >Aside</aside>
+                    <main class="el-main main-box">Main</main>
+                  </section>
+                </section>
               </div>
             </el-col>
             <el-col :span="12"  >
@@ -21,7 +27,10 @@
           <el-row :gutter="20" >
             <el-col :span="12">
               <div class="img-box">
-                <img src="@/assets/image/layout3.png" alt="">
+                <section class="el-container is-vertical">
+                  <header class="el-header header-box" >Header</header>
+                  <main class="el-main main-box"  >Main</main>
+                </section>
               </div>
             </el-col>
             <el-col :span="12">
@@ -57,7 +66,7 @@
   .img-box{
     width: 100%;
     overflow: hidden;
-    height: 215px;
+    height: 260px;
   }
   .img-box img{
     width: inherit;
@@ -72,5 +81,40 @@
   .hljs {
     font-size: 12px;
     background-color: #fafafa;
+  }
+  #chang-jian-ye-mian-bu-ju+.demo-container>.source>.el-container {
+    margin-bottom: 40px;
+  }
+  .el-container.is-vertical {
+    flex-direction: column;
+  }
+  .el-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  .header-box{
+    height: 60px;
+    background-color: #b3c0d1;
+    text-align: center;
+    line-height: 60px
+  }
+  .main-box{
+    height: 200px;
+    background-color: #e9eef3;
+    text-align: center;
+    line-height: 160px;
+  }
+  .asilde-box{
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    background-color: #e9eef3;
+    text-align: center;
+    background-color: #d3dce6;
   }
 </style>
