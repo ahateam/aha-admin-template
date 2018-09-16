@@ -63,10 +63,14 @@ export default {
         {
           path: '/',
           name: 'set1',
-        }
+        },
+
       ]
     },
-
+    {
+      path: '/teaching/test',
+      name: 'teachingTese',
+    }
   ]
 };
 

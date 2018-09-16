@@ -21,6 +21,7 @@ import VCharts from  '@/views/table/VCharts'
 import zyProductCenter from '@/views/showPage/zyProductCenter'
 import zyProductList from '@/views/showPage/zyProductList'
 import layout from '@/views/layout/layout'
+import teachingTest from '@/views/teaching/test/test'
 Vue.use(Router);
 
 
@@ -129,6 +130,11 @@ export const sitemapRouters = [
     path: '/register',
     name: 'register',
     component: register,
+  },
+  {
+    path: '/teaching/test',
+    name: 'teachingTest',
+    component: teachingTest,
   },
 
 ];
