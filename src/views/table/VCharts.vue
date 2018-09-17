@@ -1,14 +1,14 @@
 <template>
-    <div>
-      <el-row style="margin: 10px; background: #fff">
-        <el-col :span="12">
-          <ve-histogram :data="chartData" :settings="chartSettings"></ve-histogram>
-        </el-col>
-        <el-col :span="12">
-          <ve-pie :data="chartData1" :settings="chartSettings1"></ve-pie>
-        </el-col>
-      </el-row>
-    </div>
+  <div>
+    <el-row style="margin: 10px; background: #fff">
+      <el-col :span="12">
+        <ve-histogram :data="chartData" :settings="chartSettings"></ve-histogram>
+      </el-col>
+      <el-col :span="12">
+        <ve-pie :data="chartData1" :settings="chartSettings1"></ve-pie>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>
