@@ -4,7 +4,7 @@
 
         <content-to-title :title="title" style="padding: 10px 0"></content-to-title>
         <el-row>
-          <el-button>1233456</el-button>
+          <el-button>默认按钮</el-button>
           <el-button type="primary">主要按钮</el-button>
           <el-button type="success">成功按钮</el-button>
           <el-button type="info">信息按钮</el-button>
