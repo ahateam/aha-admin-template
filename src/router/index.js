@@ -22,6 +22,8 @@ import zyProductCenter from '@/views/showPage/zyProductCenter'
 import zyProductList from '@/views/showPage/zyProductList'
 import layout from '@/views/layout/layout'
 import teachingTest from '@/views/teaching/test/test'
+
+
 Vue.use(Router);
 
 
@@ -31,12 +33,12 @@ export const sitemapRouters = [
     path: '/',
     redirect: '/home',
   },
+
   {
     path: '/error',
     name: 'error',
     component: error,
   },
-
   {
     path: '/index',
     name: 'index',
@@ -116,9 +118,7 @@ export const sitemapRouters = [
         path:'/layout',
         name:'layout',
         component:layout
-      }
-
-
+      },
     ]
   },
   {

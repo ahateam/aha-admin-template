@@ -25,16 +25,70 @@
             <content-to-title :title="title1"></content-to-title>
          </el-row>
           <el-row :gutter="20" >
+          <el-col :span="12">
+            <div class="img-box">
+              <section class="el-container is-vertical">
+                <header class="el-header header-box" >Header</header>
+                <main class="el-main main-box"  style="height: 210px;line-height: 170px">Main</main>
+              </section>
+            </div>
+          </el-col>
+          <el-col :span="12"  >
+            <div class="img-box">
+              <section class="el-container is-vertical">
+                <header class="el-header header-box"  style="height: 60px;">Header</header>
+                <main class="el-main main-box" style="height: 140px;line-height: 100px">Main</main>
+                <footer class="el-footer" style="height: 60px;background-color: #b3c0d1;text-align: center;line-height: 50px">Footer</footer></section>
+            </div>
+          </el-col>
+        </el-row>
+          <el-row :gutter="20" style="margin-top: 20px" >
             <el-col :span="12">
               <div class="img-box">
-                <section class="el-container is-vertical">
-                  <header class="el-header header-box" >Header</header>
-                  <main class="el-main main-box"  >Main</main>
+                <section class="el-container">
+                  <aside class="el-aside asilde-box" style="width: 200px;height: 250px">Aside</aside>
+                  <main class="el-main main-box" style="height: 250px;line-height: 210px">Main</main>
                 </section>
               </div>
             </el-col>
+            <el-col :span="12"  >
+              <div class="img-box">
+                <section class="el-container is-vertical">
+                    <header class="el-header header-box" >Header</header>
+                    <section class="el-container">
+                      <aside class="el-aside asilde-box" style="width: 200px;">Aside</aside>
+                      <section class="el-container is-vertical">
+                        <main class="el-main main-box" style="height: 100px;line-height: 60px">Main</main>
+                        <footer class="el-footer footer-box" style="height: 60px;">Footer</footer>
+                      </section>
+                    </section>
+                </section>
+              </div>
+            </el-col>
+          </el-row>
+          <el-row :gutter="20" style="margin-top: 20px" >
             <el-col :span="12">
-
+              <div class="img-box">
+                <section class="el-container">
+                    <aside class="el-aside asilde-box" style="width: 200px;height: 250px">Aside</aside>
+                    <section class="el-container is-vertical">
+                      <header class="el-header header-box" >Header</header>
+                      <main class="el-main main-box" style="line-height: 160px">Main</main>
+                    </section>
+                </section>
+              </div>
+            </el-col>
+            <el-col :span="12"  >
+              <div class="img-box">
+                <section class="el-container">
+                    <aside class="el-aside asilde-box" style="width: 200px;height: 250px">Aside</aside>
+                    <section class="el-container is-vertical">
+                      <header class="el-header header-box" >Header</header>
+                      <main class="el-main main-box" style="height: 110px;line-height: 110px">Main</main>
+                      <footer class="el-footer footer-box" >Footer</footer>
+                    </section>
+                </section>
+              </div>
             </el-col>
           </el-row>
         </el-row>
@@ -97,16 +151,16 @@
     min-width: 0;
   }
   .header-box{
-    height: 60px;
+    height: 50px;
+    line-height: 50px;
     background-color: #b3c0d1;
     text-align: center;
-    line-height: 60px
   }
   .main-box{
     height: 200px;
     background-color: #e9eef3;
     text-align: center;
-    line-height: 160px;
+
   }
   .asilde-box{
     height: 200px;
@@ -116,5 +170,11 @@
     background-color: #e9eef3;
     text-align: center;
     background-color: #d3dce6;
+  }
+  .footer-box{
+    height: 50px;
+    background-color: #b3c0d1;
+    text-align: center;
+    line-height: 50px;
   }
 </style>

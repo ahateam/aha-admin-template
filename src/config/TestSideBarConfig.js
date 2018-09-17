@@ -104,7 +104,8 @@ export default {
         },
 
       ]
-    }
+    },
+
   ]
 };
 
