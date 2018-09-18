@@ -312,7 +312,7 @@
     padding: 10px;
   }
   .title{
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 0px 20px;
   }
   .input{
