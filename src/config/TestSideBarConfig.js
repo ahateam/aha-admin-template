@@ -102,9 +102,19 @@ export default {
           path:'/zyProductList',
           name:'zyProductList'
         },
-
       ]
     },
+    {
+      path:'/',
+      name:'showMock',
+      icon:'el-icon-time',
+      child:[
+        {
+          path:'/showMock',
+          name:'showMock'
+        }
+      ]
+    }
 
   ]
 };

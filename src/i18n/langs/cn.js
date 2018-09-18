@@ -47,12 +47,7 @@ const cn = {
     'showPage':'展示页面',
     'zyProductList':'中源产品列表',
     'layout':'布局详解',
-  },
-
-
-
-  router1:{
-
+    'showMock':'Mock接口'
   },
 
   content: {

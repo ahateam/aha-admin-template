@@ -22,7 +22,7 @@ import zyProductCenter from '@/views/showPage/zyProductCenter'
 import zyProductList from '@/views/showPage/zyProductList'
 import layout from '@/views/layout/layout'
 import teachingTest from '@/views/teaching/test/test'
-
+import showMock from '@/views/mock/showMock'
 
 Vue.use(Router);
 
@@ -119,6 +119,11 @@ export const sitemapRouters = [
         name:'layout',
         component:layout
       },
+      {
+        path:'/showMock',
+        name:'showMock',
+        component:showMock
+      }
     ]
   },
   {

@@ -43,6 +43,7 @@ const en = {
     'showPage': 'Show Page',
     'zyProductList':'Product List',
     'layout':'LayOut',
+    'showMock':'Show Mock'
   },
   content: {
     'open' : 'Open',
