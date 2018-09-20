@@ -1,181 +1,179 @@
 <template>
-    <div>
-      <div style="background: #fff;padding: 20px">
-        <div class="box">
+  <div style="background: #fff;padding: 20px">
+    <div class="box">
 
-          <el-row style="padding: 20px 20px 0px 20px">
-            <content-to-title title="基本输入框" style="padding: 10px 0"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-input v-model="input" placeholder="请输入内容"></el-input>
-          </el-row>
+      <el-row style="padding: 20px 20px 0px 20px">
+        <content-to-title title="基本输入框" style="padding: 10px 0"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-input v-model="input" placeholder="请输入内容"></el-input>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="基本禁用输入框"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-input placeholder="请输入内容" v-model="input1" :disabled="true"></el-input>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="基本禁用输入框"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-input placeholder="请输入内容" v-model="input1" :disabled="true"></el-input>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="可清空输入框"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-input placeholder="请输入内容" v-model="input2" clearable></el-input>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="可清空输入框"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-input placeholder="请输入内容" v-model="input2" clearable></el-input>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="多行文本输入框"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-input type="textarea" :rows="2" placeholder="请输入内容" v-model="textarea"></el-input>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="多行文本输入框"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-input type="textarea" :rows="2" placeholder="请输入内容" v-model="textarea"></el-input>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="自适应文本输入框"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-input type="textarea" autosize placeholder="请输入内容" v-model="textarea1"></el-input>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="自适应文本输入框"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-input type="textarea" autosize placeholder="请输入内容" v-model="textarea1"></el-input>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="复合型输入框"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-input placeholder="请输入内容" v-model="input3">
-              <template slot="prepend">Http://</template>
-            </el-input>
-          </el-row>
-          <el-row  class="input" style="margin-top: 15px">
-            <el-input placeholder="请输入内容" v-model="input4">
-              <template slot="append">.com</template>
-            </el-input>
-          </el-row>
-          <el-row  class="input" style="margin-top: 15px">
-            <el-input placeholder="请输入内容" v-model="input5">
-              <el-select v-model="select" slot="prepend" placeholder="请选择" class="el-select">
-                <el-option label="选项一" value="1"></el-option>
-                <el-option label="选项二" value="2"></el-option>
-                <el-option label="选项三" value="3"></el-option>
-              </el-select>
-              <el-button slot="append" icon="el-icon-search"></el-button>
-            </el-input>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="复合型输入框"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-input placeholder="请输入内容" v-model="input3">
+          <template slot="prepend">Http://</template>
+        </el-input>
+      </el-row>
+      <el-row  class="input" style="margin-top: 15px">
+        <el-input placeholder="请输入内容" v-model="input4">
+          <template slot="append">.com</template>
+        </el-input>
+      </el-row>
+      <el-row  class="input" style="margin-top: 15px">
+        <el-input placeholder="请输入内容" v-model="input5">
+          <el-select v-model="select" slot="prepend" placeholder="请选择" class="el-select">
+            <el-option label="选项一" value="1"></el-option>
+            <el-option label="选项二" value="2"></el-option>
+            <el-option label="选项三" value="3"></el-option>
+          </el-select>
+          <el-button slot="append" icon="el-icon-search"></el-button>
+        </el-input>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="不同尺寸输入框"></content-to-title>
-          </el-row>
-          <el-row :gutter="20" class="input">
-            <el-col :span="6">
-              <el-input placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input7"></el-input>
-            </el-col>
-            <el-col :span="6">
-              <el-input size="medium" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input8"></el-input>
-            </el-col>
-            <el-col :span="6">
-              <el-input size="small" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input9"></el-input>
-            </el-col>
-            <el-col :span="6">
-              <el-input size="mini" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input10"></el-input>
-            </el-col>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="不同尺寸输入框"></content-to-title>
+      </el-row>
+      <el-row :gutter="20" class="input">
+        <el-col :span="6">
+          <el-input placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input7"></el-input>
+        </el-col>
+        <el-col :span="6">
+          <el-input size="medium" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input8"></el-input>
+        </el-col>
+        <el-col :span="6">
+          <el-input size="small" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input9"></el-input>
+        </el-col>
+        <el-col :span="6">
+          <el-input size="mini" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input10"></el-input>
+        </el-col>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="带 icon 的输入框"></content-to-title>
-          </el-row>
-          <el-row :gutter="20" class="input">
-            <el-col :span="4">
-              <div class="advice">属性方式：</div>
-            </el-col>
-            <el-col :span="10">
-              <el-input placeholder="请选择日期" suffix-icon="el-icon-date" v-model="input6"></el-input>
-            </el-col>
-            <el-col :span="10">
-              <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input61"></el-input>
-            </el-col>
-          </el-row>
-          <el-row :gutter="20" class="input" style="margin-top: 15px">
-            <el-col :span="4">
-              <div class="advice">slot 方式：</div>
-            </el-col>
-            <el-col :span="10">
-              <el-input placeholder="请选择日期" v-model="input62">
-                <i slot="suffix" class="el-input__icon el-icon-date"></i>
-              </el-input>
-            </el-col>
-            <el-col :span="10">
-              <el-input placeholder="请输入内容" v-model="input63">
-                <i slot="prefix" class="el-input__icon el-icon-search"></i>
-              </el-input>
-            </el-col>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="带 icon 的输入框"></content-to-title>
+      </el-row>
+      <el-row :gutter="20" class="input">
+        <el-col :span="4">
+          <div class="advice">属性方式：</div>
+        </el-col>
+        <el-col :span="10">
+          <el-input placeholder="请选择日期" suffix-icon="el-icon-date" v-model="input6"></el-input>
+        </el-col>
+        <el-col :span="10">
+          <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input61"></el-input>
+        </el-col>
+      </el-row>
+      <el-row :gutter="20" class="input" style="margin-top: 15px">
+        <el-col :span="4">
+          <div class="advice">slot 方式：</div>
+        </el-col>
+        <el-col :span="10">
+          <el-input placeholder="请选择日期" v-model="input62">
+            <i slot="suffix" class="el-input__icon el-icon-date"></i>
+          </el-input>
+        </el-col>
+        <el-col :span="10">
+          <el-input placeholder="请输入内容" v-model="input63">
+            <i slot="prefix" class="el-input__icon el-icon-search"></i>
+          </el-input>
+        </el-col>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="远程搜索输入框"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-autocomplete
-              v-model="state4"
-              :fetch-suggestions="querySearchAsync"
-              placeholder="请输入内容"
-              @select="handleSelect"
-            ></el-autocomplete>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="远程搜索输入框"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-autocomplete
+          v-model="state4"
+          :fetch-suggestions="querySearchAsync"
+          placeholder="请输入内容"
+          @select="handleSelect"
+        ></el-autocomplete>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="自定义输入建议输入框"></content-to-title>
-          </el-row>
-          <el-row class="input">
-            <el-autocomplete
-              popper-class="my-autocomplete"
-              v-model="state3"
-              :fetch-suggestions="querySearch"
-              placeholder="请输入内容"
-              @select="handleSelect">
-              <i
-                class="el-icon-edit el-input__icon"
-                slot="suffix"
-                @click="handleIconClick">
-              </i>
-              <template slot-scope="{ item }">
-                <div class="name">{{ item.value }}</div>
-                <span class="addr">{{ item.address }}</span>
-              </template>
-            </el-autocomplete>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="自定义输入建议输入框"></content-to-title>
+      </el-row>
+      <el-row class="input">
+        <el-autocomplete
+          popper-class="my-autocomplete"
+          v-model="state3"
+          :fetch-suggestions="querySearch"
+          placeholder="请输入内容"
+          @select="handleSelect">
+          <i
+            class="el-icon-edit el-input__icon"
+            slot="suffix"
+            @click="handleIconClick">
+          </i>
+          <template slot-scope="{ item }">
+            <div class="name">{{ item.value }}</div>
+            <span class="addr">{{ item.address }}</span>
+          </template>
+        </el-autocomplete>
+      </el-row>
 
-          <el-row class="title">
-            <content-to-title title="带输入建议输入框"></content-to-title>
-          </el-row>
-          <el-row :gutter="20" class="input" style="padding-bottom: 20px">
-            <el-col :span="4">
-              <div class="advice">激活即列出输入建议：</div>
-            </el-col>
-            <el-col :span="8">
-              <el-autocomplete
-                v-model="state1"
-                :fetch-suggestions="querySearch"
-                placeholder="请输入内容"
-                @select="handleSelect"
-              ></el-autocomplete>
-            </el-col>
-            <el-col :span="4">
-              <div class="advice">输入后匹配输入建议：</div>
-            </el-col>
-            <el-col :span="8">
-              <el-autocomplete
-                v-model="state2"
-                :fetch-suggestions="querySearch"
-                placeholder="请输入内容"
-                :trigger-on-focus="false"
-                @select="handleSelect"
-              ></el-autocomplete>
-            </el-col>
-          </el-row>
+      <el-row class="title">
+        <content-to-title title="带输入建议输入框"></content-to-title>
+      </el-row>
+      <el-row :gutter="20" class="input" style="padding-bottom: 20px">
+        <el-col :span="4">
+          <div class="advice">激活即列出输入建议：</div>
+        </el-col>
+        <el-col :span="8">
+          <el-autocomplete
+            v-model="state1"
+            :fetch-suggestions="querySearch"
+            placeholder="请输入内容"
+            @select="handleSelect"
+          ></el-autocomplete>
+        </el-col>
+        <el-col :span="4">
+          <div class="advice">输入后匹配输入建议：</div>
+        </el-col>
+        <el-col :span="8">
+          <el-autocomplete
+            v-model="state2"
+            :fetch-suggestions="querySearch"
+            placeholder="请输入内容"
+            :trigger-on-focus="false"
+            @select="handleSelect"
+          ></el-autocomplete>
+        </el-col>
+      </el-row>
 
-        </div>
-      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -298,7 +296,6 @@
       mounted() {
         this.restaurants = this.loadAll();
       },
-
       components:{
         ContentToTitle
       },
