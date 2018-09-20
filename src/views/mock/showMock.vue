@@ -4,13 +4,13 @@
         <content-to-title title="mock测试： /user "></content-to-title>
          <el-row style="margin-top: 20px;border-bottom: 1px solid #ddd;" v-for="(item,_index) in userData" :key="_index">
              <p>
-               <span>姓名：</span><span>{{item.name}}</span>
+               <span>类型：</span><span>{{item.type}}</span>
              </p>
              <p>
-               <span>头像：</span><span>{{item.thunb_img}}</span>
+               <span>名称：</span><span>{{item.name}}</span>
              </p>
              <p>
-               <span>邮箱：</span> <span>{{item.email}}</span>
+               <span>有效期：</span> <span>{{item.date}}</span>
              </p>
 
          </el-row>
@@ -38,7 +38,7 @@
           getUserData(){
             console.log('开始请求');
             let that = this;
-            this.$http.get('/user')
+            this.$http.get('/couponList')
               .then(function (res) {
                 console.log('请求成功了');
                 that.userData = res.data.data;

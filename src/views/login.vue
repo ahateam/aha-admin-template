@@ -93,9 +93,22 @@
     methods:{
       loginBtn(){
         let that = this;
-        this.$http.post('/login',{
+        this.$http.post('/login')             //请求 /login 接口
+          .then(function (res) {              //成功执行函数
+            if(res.data.data[0].code == '1'){       //判断返回值中的code  登陆成功 code == 1
+              that.$message({                       //弹出登陆成功提示
+                message: res.data.data[0].msg,
+                type: 'success'
+              })
+              setTimeout(function () {            //延迟0.2s 跳转页面
+                that.$router.push({path: '/home'});
+              },200)
+              ;
+            }else{
+              that.$message.error(res.data.data[0].msg);    //弹出登陆失败提示
+            }
 
-        })
+          })
       }
     }
   }

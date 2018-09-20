@@ -1,29 +1,19 @@
 const Mock = require('mockjs');
 
+
 const loginData = function (opt) {
   console.log('opt',opt);
-  let userInfo =[
+  let loginData = [
     {
-      name:'admin',
-      pwd:'admin'
-    },
-    {
-      name:'贝克汉姆',
-      pwd:'123456'
-    },
-    {
-      name:'小红椒',
-      pwd:'123456'
-    },
-    {
-      name:'盖茨',
-      pwd:'123456'
-    },
-    {
-      name:'贵阳理工',
-      pwd:'123456'
+      code:'1',
+      msg:'登陆成功!'
     }
   ]
+  return{
+    data:loginData  //返回假数据
+  }
+
 }
 
 
+Mock.mock('/login','/post',loginData());
