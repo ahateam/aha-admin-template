@@ -46,7 +46,7 @@ const produceData = function (opt) {
 
 
 const loginData = function (opt) {
-  console.log('opt',opt);
+
   let loginData = [
     {
       code:'1',
