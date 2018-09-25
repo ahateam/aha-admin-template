@@ -1,7 +1,7 @@
 <template>
     <div>
       <el-row class="row-first" >
-        <content-to-title title="mock测试： /user "></content-to-title>
+        <content-to-title title="mock测试： /优惠卷列表 "></content-to-title>
          <el-row style="margin-top: 20px;border-bottom: 1px solid #ddd;" v-for="(item,_index) in userData" :key="_index">
              <p>
                <span>类型：</span><span>{{item.type}}</span>
