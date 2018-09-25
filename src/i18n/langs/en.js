@@ -61,6 +61,7 @@ const en = {
     'click' : 'Click',
     'auto' : 'Auto',
     'manual_trigger' : 'Manual trigger',
+    'coupons':'Coupons'
   },
   table: {
     'stacking_area_map' : 'Stack_map',

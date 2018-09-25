@@ -23,6 +23,7 @@ import zyProductList from '@/views/showPage/zyProductList'
 import layout from '@/views/layout/layout'
 import teachingTest from '@/views/teaching/test/test'
 import showMock from '@/views/mock/showMock'
+import coupons from '@/views/showPage/coupons'
 
 Vue.use(Router);
 
@@ -140,6 +141,11 @@ export const sitemapRouters = [
     path: '/teaching/test',
     name: 'teachingTest',
     component: teachingTest,
+  },
+  {
+    path:'/coupons',
+    name:'coupons',
+    component:coupons,
   },
 
 ];

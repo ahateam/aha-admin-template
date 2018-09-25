@@ -102,6 +102,10 @@ export default {
           path:'/zyProductList',
           name:'zyProductList'
         },
+        {
+          path:'/coupons',
+          name:'coupons'
+        },
       ]
     },
     {
@@ -114,7 +118,7 @@ export default {
           name:'showMock'
         }
       ]
-    }
+    },
 
   ]
 };

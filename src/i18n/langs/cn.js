@@ -47,7 +47,8 @@ const cn = {
     'showPage':'展示页面',
     'zyProductList':'中源产品列表',
     'layout':'布局详解',
-    'showMock':'Mock接口'
+    'showMock':'Mock接口',
+    'coupons':'优惠卷'
   },
 
   content: {
