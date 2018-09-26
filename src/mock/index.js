@@ -9,7 +9,7 @@ const produceData = function (opt) {
 
     {
       type : '折扣券',
-      name : '9折卡',
+      name : '9.5折卡',
       date : '领取后当天生效3天有效' ,
       stock : '100'
     },
@@ -33,16 +33,6 @@ const produceData = function (opt) {
     }
 
   ];      //组合假数据的数组名
-  // for (let i = 0; i < 5 ; i++){ //定义数据生成规则
-  //   let newArticleObject = {
-  //     title:Random.csentence(5,30),
-  //     thunb_img:Random.dataImage('300*250','mock的图片'),
-  //     name:Random.cname,
-  //     date:Random.date()+' '+Random.time(),
-  //     email:Random.email(),
-  //   }
-  //   articles.push(newArticleObject)
-  // }
   return{
      data:articles  //返回假数据
   }
@@ -65,6 +55,7 @@ const loginData = function (opt) {
 }
 
 Mock.mock('/login',/post|get/i,loginData());   //拦截/user请求，并返回假数据
+
 Mock.mock('/couponList',/post|get/i,produceData());   //拦截/user请求，并返回假数据
 
 

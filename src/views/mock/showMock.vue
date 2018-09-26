@@ -33,13 +33,17 @@
             couponList:[],
           }
       },
+
       mounted(){
           this.getUserData()
       },
+
       methods:{
           getUserData(){
             console.log('开始请求');
+
             let that = this;
+
             this.$http.get('/couponList')
               .then(function (res) {
                 console.log('请求成功了');
