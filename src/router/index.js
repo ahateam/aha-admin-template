@@ -25,6 +25,9 @@ import teachingTest from '@/views/teaching/test/test'
 import showMock from '@/views/mock/showMock'
 import coupons from '@/views/showPage/coupons'
 
+import wx from '@/views/wx/wxLogin'
+import wxHome from '@/views/wx/home/wxhome'
+import system from '@/views/wx/system/system'
 Vue.use(Router);
 
 
@@ -147,6 +150,24 @@ export const sitemapRouters = [
     name: 'teachingTest',
     component: teachingTest,
   },
+
+  {
+    path:'/wx',
+    name:'wx',
+    component:wx,
+  },
+  {
+    path:'/wx/home',
+    name:'wxhome',
+    component:wxHome,
+    children: [
+      {
+        path:'/system',
+        name:'system',
+        component:system
+      }
+    ]
+  }
 ];
 
 export default new Router({
