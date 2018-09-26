@@ -11,25 +11,29 @@ const produceData = function (opt) {
       type : '折扣券',
       name : '9折卡',
       date : '领取后当天生效3天有效' ,
-      stock : '100'
+      stock : '100',
+      state : '已投放'
     },
     {
       type : '团购券',
       name : '中秋团购',
       date : '领取后当天生效3天有效' ,
-      stock : '100'
+      stock : '100',
+      state : '待投放'
     },
     {
       type : '代金券',
       name : '20元代金券',
       date : '2018-9-10（已过期）' ,
-      stock : '50'
+      stock : '50',
+      state : '已投放'
     },
     {
       type : '兑换券',
       name : '天猫兑换券',
       date : '2018-11-11' ,
-      stock : '500'
+      stock : '500',
+      state : '待投放'
     }
 
   ];      //组合假数据的数组名

@@ -116,6 +116,11 @@ export const sitemapRouters = [
         component:zyProductList
       },
       {
+        path:'/coupons',
+        name:'coupons',
+        component:coupons,
+      },
+      {
         path:'/layout',
         name:'layout',
         component:layout
@@ -142,14 +147,7 @@ export const sitemapRouters = [
     name: 'teachingTest',
     component: teachingTest,
   },
-  {
-    path:'/coupons',
-    name:'coupons',
-    component:coupons,
-  },
-
 ];
-
 
 export default new Router({
   routes: sitemapRouters,

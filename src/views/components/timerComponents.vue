@@ -111,7 +111,7 @@
           带快捷选项
           <el-row class="input">
             <el-date-picker
-              v-model="value2"
+              v-model="value7"
               align="right"
               type="date"
               placeholder="选择日期"
