@@ -1,76 +1,39 @@
 <template>
   <div class="box">
-    <div class="nav">
-      <div class="nav-box">
-        <div class="logo">
-          <img src="@/assets/images/logo.jpg" alt="">
-        </div>
-        <div class="nav-btn">
-          <div class="btn-box">
-            设为首页
-          </div>
-        </div>
-        <div class="nav-btn1">
-          <div class="btn-box">
-            加入收藏
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="content">
-      <div class="content-box">
-        <div class="content-text1">
-          <img src="@/assets/images/contenttest.png" alt="">
-        </div>
-        <div class="content-text">
-          <div class="content-form">
-            <div class="form-title">
-              <span class="title-text">登 录</span>
-            </div>
-            <div class="form-input">
-              <el-input v-model="userName" placeholder="用户名" style="width:99%"></el-input>
-            </div>
-            <div class="form-input">
-              <el-input type="password" v-model="pwd" placeholder="密码" style="width:99%"></el-input>
-            </div>
-            <div class="form-input">
-              <div class="form-btn" style="height: 39px"></div>
-            </div>
-            <div class="form-check">
-              <div class="active-login">
-                <el-checkbox v-model="checked">下次自动登录</el-checkbox>
+      <div class="text">
+        <h2>企业通讯与销售管理平台</h2>
+        <p>融合呼叫中心、CRM、OA办公、企业微信等多<br/>
+          种应用，基于云计算SaaS平台架构，随时随地只<br/>
+          要有网络的地方都可使用，超过20万家企业见证<br/>
+          其安全稳定可靠，值得信赖。</p>
+      </div>
+      <div class="login-form">
+        <div class="form-bg"></div>
+          <form action="">
+            <div class="form">
+              <h1>登录平台</h1>
+              <p>
+                请用手机号作为用户名登录
+              </p>
+              <div class="item">
+                <i class="iconfont icon-yonghu-tianchong"></i>
+                <input class="input" type="text" name="user" placeholder="请输入用户名" />
               </div>
-              <div class="active-password">
-                忘记密码
+              <div class="item">
+                <i class="iconfont icon-duanxin2"></i>
+                <input class="input" type="password" name="user" placeholder="请输入密码" />
+              </div>
+              <div class="item">
+                <input type="checkbox" style="float: left;width: 15px;height: 25px;margin-top: 10px">
+                &nbsp;<span style="color: #fff">记住密码</span>
+                <a href="#" style="float: right;text-decoration: none;cursor: pointer;font-size: 14px;color: white">忘记密码?</a>
+              </div>
+              <div class="item">
+                <button class="button" @click="loginBtn">登&nbsp;&nbsp;录</button>
               </div>
             </div>
-            <div class="form-input1">
-              <div class="submit-btn" @click="loginBtn">登 录</div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-text1">
-        <span >企业法人营业执照 &nbsp;</span>
-        <span> &nbsp;| &nbsp;</span>
-        <span>基础电信业务经营许可证 &nbsp;</span>
-        <span> &nbsp;| &nbsp;</span>
-        <span>增值电信业务经营许可证 &nbsp;</span>
-        <span>  &nbsp;| &nbsp; </span>
-        <span>网络文化经营许可证 </span>
-      </div>
-      <div class="footer-text2">
-        <span>Copyright</span>
-        <span>&copy; </span>
-        <span> 1999-2018 中国联通 版权所有</span>
-      </div>
-      <div class="footer-text2">
-          <span>
-            <img src="@/assets/images/footer-icon.png" alt="" style="width: 160px;height: 38px">
-          </span>
+          </form>
       </div>
     </div>
   </div>
@@ -79,15 +42,6 @@
 <script>
     export default {
         name: "wxLogin",
-      data(){
-        return {
-          companyCode:'',
-          userName:'',
-          pwd:'',
-          btn:'',
-          checked:false,
-        }
-      },
       methods:{
         loginBtn(){
           let that = this;
@@ -113,200 +67,87 @@
 </script>
 
 <style scoped lang="scss">
-  a{
-    text-decoration:none;
-    color:#333;
-  }
-  html{
-    overflow-y: auto;
-  }
-  *{
-    margin: 0;
-    padding: 0;
-    font-family: "微软雅黑";
-  }
   .box{
+    position: absolute;
     width: 100%;
     height: 100vh;
-    overflow-y: auto;
-  }
-  .nav{
-    width: 100%;
-    height: 60px;
-    background: #fff;
-  }
-  .nav-box{
-    position: relative;
-    width: 75%;
-    height: 60px;
-    margin: 0 auto;
-  }
-  .logo{
-    position: absolute;
-    left: 0;
-    width: 110px;
-    height: 50px;
-    bottom: 5px;
-    overflow: hidden;
-  }
-  .logo img{
-    width: 110px;
-    height: 50px;
-  }
-  .nav-btn{
-    position: absolute;
-    right: 70px;
-    bottom: 5px;
-  }
-
-  .nav-btn1{
-    position: absolute;
-    right: 0px;
-    bottom: 5px;
-  }
-  .btn-box{
-    float: left;
-    margin-right: 10px;
-    height: 22px;
-    line-height: 22px;
-    margin-top: 12px;
-    background: #f0581d;
-    color: #fff;
-    font-size: 12px;
-    padding: 0  6px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .btn-box:hover{
-    background: #f16821;
-  }
-  .btn-box:active{
-    background: #db3820;
-  }
-  .content{
-    width: 100%;
-    height: 800px;
-    background-image: url("../../assets/images/loginbg.jpg");
+    background-image: url("../../assets/wximgs/bg.jpg");
     background-size: cover;
     background-position: center;
   }
-  .footer{
-    width: 100%;
-    background: #fff;
-    bottom: 0;
-    margin-top: 20px;
+  .content{
+    position: relative;
+    width: 960px;
+    margin: 140px auto;
   }
-  .content-box{
-    width:75%;
-    margin: 0 auto;
-  }
-  .content-text{
+  .text{
     float: left;
-    width: 50%;
-    height: 800px;
+    margin: 90px 0 0 104px;
   }
-  .content-text1{
-    float: left;
-    width: 50%;
-    height: 800px;
-    line-height: 800px;
+  .text h2{
+    color: white;
+    font-size: 26px;
   }
-  .content-text1 img{
-    width: 85%;
-    vertical-align:middle;
+  .text p{
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+    margin-top: 30px;
   }
-  .content-form{
+  .login-form{
     float: right;
-    margin-top:157px;
-    width: 310px;
-    padding:20px 20px;
-    border-radius: 5px;
-    background: #fff;
+    position: relative;
+    padding: 40px 35px 40px 45px;
+    width: 270px;
+    height: 330px;
   }
-  .form-title{
+  .form-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    filter: alpha(opacity=80);
     width: 100%;
-    height: 50px;
-    padding-left: 10px;
+    height: 100%;
+    background-color: #141924;
   }
-  .title-text{
-    font-size: 20px;
-    padding-bottom: 10px;
-    font-weight: 600;
-    border-bottom: 4px solid #d42b2f;
+  .form{
+    position: absolute;
   }
-
-  .form-input{
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
+  .form h1{
+    color: white;
+    font-size: 18px;
+  }
+  .form p {
+    font-size: 14px;
+    color: #e9e9e9;
     margin-top: 15px;
   }
-  .form-btn{
-    width: 89%;
-    height: 42px;
-    border: 1px solid #dcdfe6;
-    border-radius: 4px;
-    padding: 0 15px;
-    cursor: pointer;
-    background-image: url("../../assets/images/btn-bg.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    margin:0 auto;
-  }
-
-  .form-btn:active{
-    border: 1px solid rgb(64,158,255);
-  }
-  .active-login{
-    float: left;
-    color: #313131;
-    padding-left: 15px;
-  }
-  .active-password{
-    float: right;
-    color: #313131;
-    padding-right: 15px;
-    font-size: 14px;
-    color: #606266;
-    cursor: pointer;
-  }
-  .form-check{
-    width: 100%;
+  .item{
+    margin: 25px 0;
     height: 40px;
     line-height: 40px;
   }
-  .form-input1{
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 15px;
-    margin-bottom: 30px;
+  .input{
+    float: right;
+    width: 200px;
+    padding: 12px;
+    border: none;
   }
-  .submit-btn{
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    background: #ca361f;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 18px;
-    padding: 0 15px;
+  .item i{
+    float: left;
+    font-size: 40px;
+    background: gainsboro;
+  }
+  .button{
+    width: 250px;
+    height: 40px;
     cursor: pointer;
-  }
-  .footer{
-    padding:20px 0;
-  }
-  .footer-text1{
     text-align: center;
-    color: #000;
+    line-height: 40px;
     font-size: 16px;
-    cursor: pointer;
-  }
-  .footer-text2{
-    margin-top: 10px;
-    text-align: center;
-    color: #808080;
-    font-size: 15px;
-    cursor: pointer;
+    color: white;
+    border: none;
+    background: url("../../assets/wximgs/button-bg.jpg");
   }
 </style>
