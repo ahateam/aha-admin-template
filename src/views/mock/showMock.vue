@@ -3,17 +3,20 @@
       <el-row class="row-first" >
         <content-to-title title="mock测试： /优惠卷列表 "></content-to-title>
          <el-row style="margin-top: 20px;border-bottom: 1px solid #ddd;" v-for="(item,_index) in couponList" :key="_index">
-             <p>
-               <span>类型：</span><span>{{item.type}}</span>
-             </p>
-             <p>
-               <span>名称：</span><span>{{item.name}}</span>
-             </p>
-             <p>
-               <span>有效期：</span> <span>{{item.date}}</span>
-             </p>
+           <p>
+             <span>类型：</span><span>{{item.type}}</span>
+           </p>
+           <p>
+             <span>名称：</span><span>{{item.name}}</span>
+           </p>
+           <p>
+             <span>有效期：</span> <span>{{item.date}}</span>
+           </p>
            <p>
              <span>剩余数量：</span> <span>{{item.stock}}</span>
+           </p>
+           <p>
+             <span>全部状态：</span> <span>{{item.state}}</span>
            </p>
          </el-row>
       </el-row>

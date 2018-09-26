@@ -12,36 +12,36 @@
             <el-tab-pane label="优惠卷">
               <template>
                 <el-table
-                  :data="tableData"
+                  :data="couponList"
                   border
                   style="width: 100%">
                   <el-table-column
                     prop="type"
                     label="卡卷类型"
-                    width="180">
+                    width="120">
                   </el-table-column>
                   <el-table-column
                     prop="name"
                     label="卡卷名称"
-                    width="180">
+                    width="120">
                   </el-table-column>
                   <el-table-column
-                    prop="time"
+                    prop="date"
                     label="卡卷有效期"
-                    width="200">
+                    width="300">
                   </el-table-column>
                   <el-table-column
                     prop="state"
                     label="全部状态"
-                    width="180">
+                    width="100">
                   </el-table-column>
                   <el-table-column
-                    prop="inventory"
-                    label="库存"
-                    width="180">
+                    prop="stock"
+                    label="剩余数量">
                   </el-table-column>
                   <el-table-column
-                  label="操作">
+                  label="操作"
+                  width="250">
                   <template slot-scope="scope">
                   <el-button type="text">投放</el-button>
                   <el-button @click="handleClick(scope.row)" type="text">详情</el-button>
@@ -56,36 +56,36 @@
             <el-tab-pane label="会员卡">
               <template>
                 <el-table
-                  :data="tableData"
+                  :data="couponList"
                   border
                   style="width: 100%">
                   <el-table-column
                     prop="type"
                     label="卡卷类型"
-                    width="180">
+                    width="120">
                   </el-table-column>
                   <el-table-column
                     prop="name"
                     label="卡卷名称"
-                    width="180">
+                    width="120">
                   </el-table-column>
                   <el-table-column
-                    prop="time"
+                    prop="date"
                     label="卡卷有效期"
-                    width="200">
+                    width="300">
                   </el-table-column>
                   <el-table-column
                     prop="state"
                     label="全部状态"
-                    width="180">
+                    width="100">
                   </el-table-column>
                   <el-table-column
-                    prop="inventory"
-                    label="库存"
-                    width="180">
+                    prop="stock"
+                    label="剩余数量">
                   </el-table-column>
                   <el-table-column
-                    label="操作">
+                    label="操作"
+                    width="250">
                     <template slot-scope="scope">
                       <el-button type="text">投放</el-button>
                       <el-button @click="handleClick(scope.row)" type="text">详情</el-button>
@@ -115,48 +115,29 @@
         name: "coupons",
       data() {
         return {
-          tableData: [{
-            type: '折扣卷',
-            name: '9折卡',
-            time: '领取后当天生效3天有效',
-            state: '待投放',
-            inventory: '10'
-          }, {
-            type: '团购卷',
-            name: '111',
-            time: '领取后当天生效3天有效',
-            state: '已投放',
-            inventory: '12'
-          }, {
-            type: '代金券',
-            name: '20元代金券',
-            time: '领取后当天生效3天有效',
-            state: '已投放',
-            inventory: '15'
-          }, {
-            type: '兑换卷',
-            name: '兑换券',
-            time: '2018-09-10至2018-09-10（已过期）',
-            state: '已投放',
-            inventory: '9'
-          },{
-            type: '代金卷',
-            name: '满1000减100代金券优惠卷',
-            time: '领取后当天生效3天有效',
-            state: '已投放',
-            inventory: '7'
-          },{
-            type: '优惠卷',
-            name: '满199减100',
-            time: '领取后当天生效3天有效',
-            state: '已投放',
-            inventory: '22'
-          },]
+          couponList:[],
         }
+      },
+      mounted(){
+        this.getUserData()
       },
       methods: {
         handleClick(row) {
           console.log(row);
+        },
+        getUserData(){
+          console.log('开始请求');
+          let that = this;
+          this.$http.get('/couponList')   //请求couponList接口
+            .then(function (res) {       //请求成功执行
+              console.log('请求成功了');
+              console.log(res);
+              that.couponList = res.data.data
+
+            })
+            .catch(function (err) {     //请求失败执行
+              console.log('错误连接'+err);
+            })
         }
       },
       components:{
@@ -168,11 +149,11 @@
 <style scoped>
   .box{
     background: gainsboro;
-    padding: 10px 10px 100px 10px;
+    padding: 10px;
   }
   .content{
     background: #fff;
-    margin: 50px;
-    padding-bottom: 30px;
+    margin: 30px;
+    padding-bottom: 50px;
   }
 </style>
