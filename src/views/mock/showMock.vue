@@ -2,7 +2,7 @@
     <div>
       <el-row class="row-first" >
         <content-to-title title="mock测试： /优惠卷列表 "></content-to-title>
-         <el-row style="margin-top: 20px;border-bottom: 1px solid #ddd;" v-for="(item,_index) in userData" :key="_index">
+         <el-row style="margin-top: 20px;border-bottom: 1px solid #ddd;" v-for="(item,_index) in couponList" :key="_index">
              <p>
                <span>类型：</span><span>{{item.type}}</span>
              </p>
@@ -12,7 +12,9 @@
              <p>
                <span>有效期：</span> <span>{{item.date}}</span>
              </p>
-
+           <p>
+             <span>剩余数量：</span> <span>{{item.stock}}</span>
+           </p>
          </el-row>
       </el-row>
     </div>
@@ -28,7 +30,7 @@
       },
       data(){
           return{
-            userData:[]
+            couponList:[],
           }
       },
       mounted(){
@@ -41,7 +43,8 @@
             this.$http.get('/couponList')
               .then(function (res) {
                 console.log('请求成功了');
-                that.userData = res.data.data;
+                console.log(res);
+                that.couponList = res.data.data;
               })
               .catch(function (err) {
                 console.log('错误连接'+err);
