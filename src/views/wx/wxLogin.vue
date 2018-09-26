@@ -1,22 +1,6 @@
 <template>
   <div class="box">
-    <div class="nav">
-      <div class="nav-box">
-        <div class="logo">
-          <img src="@/assets/images/logo.jpg" alt="">
-        </div>
-        <div class="nav-btn">
-          <div class="btn-box">
-            设为首页
-          </div>
-        </div>
-        <div class="nav-btn1">
-          <div class="btn-box">
-            加入收藏
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="content">
       <div class="content-box">
         <div class="content-text1">

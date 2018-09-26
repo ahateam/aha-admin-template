@@ -2,7 +2,7 @@ const Mock = require('mockjs');
 
 // const Random =Mock.Random;
 
-//mock数据
+//login 数据
 const produceData = function (opt) {
   console.log('opt',opt);
   let articles = [
@@ -42,8 +42,8 @@ const produceData = function (opt) {
   }
 }
 
-
-const loginData = function (opt) {
+//couponList 数据
+const loginData = function () {
 
   let loginData = [
     {
@@ -58,10 +58,54 @@ const loginData = function (opt) {
 
 }
 
-Mock.mock('/login',/post|get/i,loginData());   //拦截/user请求，并返回假数据
+//优惠卷种类
+const couponTypeList = function(){
+  let data=[
+    {
+      type : '折扣券',
+      info : '可为用户提供消费折扣',
+    },
+    {
+      type : '代金券',
+      info : '可为用户提供抵扣现金服务',
+    },
+    {
+      type : '兑换券',
+      info : '可为用户提供消费赠品服务',
+    },
+    {
+      type : '团购券',
+      info : '可为用户提供团购套餐服务',
+    },
+    {
+      type : '优惠卷',
+      info : '即通用券，建议当以上四种无法满足需求时采用',
+    }
+  ]
+  return{
+    data:data  //返回假数据
+  }
+}
+//新增优惠券
+const couponAdd = function () {
 
-Mock.mock('/couponList',/post|get/i,produceData());   //拦截/user请求，并返回假数据
+  let data = [
+    {
+      code:'1',
+      msg:'新增成功!'
+    }
+  ]
 
+  return{
+    data:data  //返回假数据
+  }
 
+}
 
+Mock.mock('/login',/post|get/i,loginData());   //拦截/login，并返回假数据
 
+Mock.mock('/couponList',/post|get/i,produceData());   //拦截/couponList，并返回假数据
+
+Mock.mock('/couponTypeList',/post|get/i,couponTypeList());   //拦截/couponTypeList，并返回假数据
+
+Mock.mock('/couponAdd',/post|get/i,couponAdd());   //拦截/couponAdd，并返回假数据
