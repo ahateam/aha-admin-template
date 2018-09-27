@@ -2,7 +2,13 @@
   <div style="background: #fff;padding: 15px 0px">
     <div class="content">
       <el-row style="padding: 30px 50px 10px 50px">
-        <content-to-title title="卡卷功能"></content-to-title>
+        <el-col :span="12">
+          <content-to-title title="卡卷功能"></content-to-title>
+        </el-col>
+        <el-col :span="12">
+          <button @click="jump" style="float: right;background: rgb(64,158,255);text-align: center;
+          font-size: 20px;color: #fff;padding: 5px;border: none;cursor: pointer;">新增卡卷</button>
+        </el-col>
       </el-row>
 
       <el-row style="padding: 0px 50px">
@@ -136,6 +142,9 @@
             .catch(function (err) {     //请求失败执行
               console.log('错误连接'+err);
             })
+        },
+        jump(){
+          this.$router.push({path: '/couponAdd'})
         }
       },
       components:{

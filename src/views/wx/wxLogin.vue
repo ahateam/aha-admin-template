@@ -53,7 +53,7 @@
                   type: 'success'
                 })
                 setTimeout(function () {            //延迟0.2s 跳转页面
-                  that.$router.push({path: '/system'});
+                  that.$router.push({path: '/wx/home'});
                 },200)
                 ;
               }else{
