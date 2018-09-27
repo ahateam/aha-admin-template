@@ -26,8 +26,8 @@
               </div>
               <div class="item">
                 <input type="checkbox" style="float: left;width: 15px;height: 25px;margin-top: 10px">
-                &nbsp;<span style="color: #fff">记住密码</span>
-                <a href="#" style="float: right;text-decoration: none;cursor: pointer;font-size: 14px;color: white">忘记密码?</a>
+                &nbsp;<span style="color: #fff;font-size: 14px">记住密码</span>
+                <a href="#" style="float: right;text-decoration: none;cursor: pointer;font-size: 14px;color: #fff">忘记密码?</a>
               </div>
               <div class="item">
                 <button class="button" @click="loginBtn">登&nbsp;&nbsp;录</button>
@@ -71,7 +71,7 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-image: url("../../assets/wximgs/bg.jpg");
+    background-image: url("../../assets/wximages/bg.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -85,11 +85,11 @@
     margin: 90px 0 0 104px;
   }
   .text h2{
-    color: white;
+    color: #fff;
     font-size: 26px;
   }
   .text p{
-    color: white;
+    color: #fff;
     font-size: 16px;
     line-height: 40px;
     margin-top: 30px;
@@ -115,7 +115,7 @@
     position: absolute;
   }
   .form h1{
-    color: white;
+    color: #fff;
     font-size: 18px;
   }
   .form p {
@@ -140,14 +140,14 @@
     background: gainsboro;
   }
   .button{
-    width: 250px;
+    width: 264px;
     height: 40px;
     cursor: pointer;
     text-align: center;
     line-height: 40px;
     font-size: 16px;
-    color: white;
+    color: #fff;
     border: none;
-    background: url("../../assets/wximgs/button-bg.jpg");
+    background: url("../../assets/wximages/button-bg.jpg");
   }
 </style>
