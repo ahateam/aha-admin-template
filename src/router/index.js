@@ -25,9 +25,12 @@ import teachingTest from '@/views/teaching/test/test'
 import showMock from '@/views/mock/showMock'
 import coupons from '@/views/showPage/coupons'
 
+//微信卡券系统
 import wx from '@/views/wx/wxLogin'
 import wxHome from '@/views/wx/home/wxhome'
-import system from '@/views/wx/system/system'
+import couponList from '@/views/wx/coupon/couponList'
+import couponAdd from  '@/views/wx/coupon/couponAdd'
+import couponAddSuccess from  '@/views/wx/coupon/couponAddSuccess'
 Vue.use(Router);
 
 
@@ -151,6 +154,7 @@ export const sitemapRouters = [
     component: teachingTest,
   },
 
+  //微信卡券系统路由定义
   {
     path:'/wx',
     name:'wx',
@@ -162,9 +166,19 @@ export const sitemapRouters = [
     component:wxHome,
     children: [
       {
-        path:'/system',
-        name:'system',
-        component:system
+        path:'/couponList',
+        name:'couponList',
+        component:couponList
+      },
+      {
+        path:'/couponAdd',
+        name:'couponAdd',
+        component:couponAdd
+      },
+      {
+        path:'/couponAddSuccess',
+        name:'couponAddSuccess',
+        component:couponAddSuccess
       }
     ]
   }

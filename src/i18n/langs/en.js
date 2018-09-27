@@ -44,7 +44,12 @@ const en = {
     'zyProductList':'Product List',
     'layout':'LayOut',
     'showMock':'Show Mock',
-    'system':'SysTem'
+
+    'couponList':'Coupon List',
+    'couponTypeList':'Coupon Type List',
+    'coupon':'Coupon',
+    'couponAdd':'Coupon Add',
+    'couponAddSuccess':'Coupon Add Success'
   },
   content: {
     'open' : 'Open',

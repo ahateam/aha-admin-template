@@ -128,7 +128,7 @@
         getUserData(){
           console.log('开始请求');
           let that = this;
-          this.$http.get('/couponList')   //请求couponList接口
+          this.$http.get('/coupon')   //请求couponList接口
             .then(function (res) {       //请求成功执行
               console.log('请求成功了');
               console.log(res);

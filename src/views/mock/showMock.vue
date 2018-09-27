@@ -47,7 +47,7 @@
 
             let that = this;
 
-            this.$http.get('/couponList')
+            this.$http.get('/coupon')
               .then(function (res) {
                 console.log('请求成功了');
                 console.log(res);

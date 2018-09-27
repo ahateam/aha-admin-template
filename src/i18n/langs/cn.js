@@ -50,7 +50,13 @@ const cn = {
     'showMock':'Mock接口',
     'coupons':'优惠卷',
 
-    'system':'系统'
+
+
+    'couponTypeList':'卡券类型列表',
+    'coupon':'卡券相关',
+    'couponList':'优惠券列表',
+    'couponAdd':'创建卡券',
+    'couponAddSuccess':'创建成功',
   },
 
   content: {

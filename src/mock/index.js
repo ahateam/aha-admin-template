@@ -2,7 +2,7 @@ const Mock = require('mockjs');
 
 // const Random =Mock.Random;
 
-//couponList 数据
+//coupon 数据
 const produceData = function (opt) {
   console.log('opt',opt);
   let articles = [
@@ -104,7 +104,7 @@ const couponAdd = function () {
 
 Mock.mock('/login',/post|get/i,loginData());   //拦截/login，并返回假数据
 
-Mock.mock('/couponList',/post|get/i,produceData());   //拦截/couponList，并返回假数据
+Mock.mock('/coupon',/post|get/i,produceData());   //拦截/coupon，并返回假数据
 
 Mock.mock('/couponTypeList',/post|get/i,couponTypeList());   //拦截/couponTypeList，并返回假数据
 
