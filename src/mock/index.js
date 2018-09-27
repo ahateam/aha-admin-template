@@ -2,7 +2,7 @@ const Mock = require('mockjs');
 
 // const Random =Mock.Random;
 
-//login 数据
+//couponList 数据
 const produceData = function (opt) {
   console.log('opt',opt);
   let articles = [
@@ -42,7 +42,7 @@ const produceData = function (opt) {
   }
 }
 
-//couponList 数据
+//login  数据
 const loginData = function () {
 
   let loginData = [
