@@ -1,6 +1,10 @@
 <template>
   <div style="background: gainsboro;padding: 20px">
     <div class="box">
+      <el-row style="margin: 0px 15px 30px 15px">
+        <content-to-title title="填写优惠券信息"></content-to-title>
+      </el-row>
+
       <el-form ref="form" :model="form" label-width="80px">
         <el-form-item label="商户名称">
           <el-input v-model="form.name" style="width: 40%"></el-input>
@@ -50,22 +54,26 @@
           <el-button type="primary" @click="onSubmit">下一步</el-button>
         </el-form-item>
       </el-form>
+
     </div>
   </div>
 </template>
 
 <script>
+  import ContentToTitle from '@/components/ContentToTitle'
+
     export default {
         name: "couponAdd",
+      components:{
+        ContentToTitle
+      },
       data() {
         return {
           form: {
             name: '',
             region: '',
             money: '',
-            date1: '',
-            date2: '',
-            desc: '',
+            desc: ''
           },
           value: '',
           pickerOptions2: {
@@ -96,12 +104,12 @@
             }]
           },
           fileList2: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
-
         }
       },
       methods: {
         onSubmit() {
           console.log('submit!');
+          this.$router.push({path: '/couponSet'})
         },
         handleRemove(file, fileList) {
           console.log(file, fileList);

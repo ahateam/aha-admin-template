@@ -57,6 +57,7 @@ const cn = {
     'couponList':'优惠券列表',
     'couponAdd':'创建卡券',
     'couponAddSuccess':'创建成功',
+    'couponSet':'卡卷设置',
   },
 
   content: {

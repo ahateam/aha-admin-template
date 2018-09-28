@@ -31,6 +31,7 @@ import wxHome from '@/views/wx/home/wxhome'
 import couponList from '@/views/wx/coupon/couponList'
 import couponAdd from  '@/views/wx/coupon/couponAdd'
 import couponAddSuccess from  '@/views/wx/coupon/couponAddSuccess'
+import couponSet from  '@/views/wx/coupon/couponSet'
 Vue.use(Router);
 
 
@@ -179,6 +180,11 @@ export const sitemapRouters = [
         path:'/couponAddSuccess',
         name:'couponAddSuccess',
         component:couponAddSuccess
+      },
+      {
+        path:'/couponSet',
+        name:'couponSet',
+        component:couponSet
       }
     ]
   }

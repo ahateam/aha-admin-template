@@ -49,7 +49,8 @@ const en = {
     'couponTypeList':'Coupon Type List',
     'coupon':'Coupon',
     'couponAdd':'Coupon Add',
-    'couponAddSuccess':'Coupon Add Success'
+    'couponAddSuccess':'Coupon Add Success',
+    'couponSet':'Coupon Set'
   },
   content: {
     'open' : 'Open',

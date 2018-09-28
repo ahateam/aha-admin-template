@@ -22,6 +22,10 @@ export default {
         {
           path:'/couponAddSuccess',
           name:'couponAddSuccess',
+        },
+        {
+          path:'/couponSet',
+          name:'couponSet',
         }
       ]
     }
