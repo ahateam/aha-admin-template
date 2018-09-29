@@ -60,7 +60,11 @@
           this.$router.push({path: '/couponAdd'})
         },
         jump() {
-          this.$router.push({path: '/couponAddSuccess'})
+          this.$router.push({path: '/couponAddSuccess'});
+            this.$message({                       //弹出新增卡卷成功提示
+              message: '新增卡卷成功',
+              type: 'success'
+            })
         }
       }
     }

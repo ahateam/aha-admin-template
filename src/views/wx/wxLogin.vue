@@ -2,7 +2,7 @@
   <div class="box">
     <div class="content">
       <div class="text">
-        <h2>企业通讯与销售管理平台</h2>
+        <h2>微信会员卡管理系统</h2>
         <p>融合呼叫中心、CRM、OA办公、企业微信等多<br/>
           种应用，基于云计算SaaS平台架构，随时随地只<br/>
           要有网络的地方都可使用，超过20万家企业见证<br/>
@@ -22,7 +22,7 @@
               </div>
               <div class="item">
                 <i class="iconfont icon-duanxin2"></i>
-                <input class="input" type="password" name="user" placeholder="请输入密码" />
+                <input class="input" type="password" name="password" placeholder="请输入密码" />
               </div>
               <div class="item">
                 <input type="checkbox" style="float: left;width: 15px;height: 25px;margin-top: 10px">
@@ -45,7 +45,7 @@
       methods:{
         loginBtn(){
           let that = this;
-          this.$http.post('/login')             //请求 /login 接口
+          this.$http.get('/login')             //请求 /login 接口
             .then(function (res) {              //成功执行函数
               if(res.data.data[0].code == '1'){       //判断返回值中的code  登陆成功 code == 1
                 that.$message({                       //弹出登陆成功提示
@@ -59,7 +59,6 @@
               }else{
                 that.$message.error(res.data.data[0].msg);    //弹出登陆失败提示
               }
-
             })
         }
       }
